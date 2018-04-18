@@ -1,4 +1,3 @@
-
 public class Rendimento {
 
 	String descricao;

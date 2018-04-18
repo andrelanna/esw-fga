@@ -1,19 +1,15 @@
-package calculoDeIRPF.tests;
-
 import static org.junit.Assert.*;
 
+import calculoDeIRPF.Deducao;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
-import calculoDeIRPF.Deducao;
-import calculoDeIRPF.IRPF;
-
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class DeducaoTest {
 
-	static IRPF irpf; 
+	static IRPF irpf;
 	
 	@BeforeClass
 	public static void setup() {
@@ -23,7 +19,7 @@ public class DeducaoTest {
 	
 	@Test
 	public void testCadastroPrimeiraDeducao() {
-		Deducao d = new Deducao("Contribuicao previdenciaria", 
+		Deducao d = new Deducao("Contribuicao previdenciaria",
 				                2000f);
 		
 		boolean resposta = irpf.cadastrarDedudacao(d);
