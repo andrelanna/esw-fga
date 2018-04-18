@@ -1,4 +1,4 @@
-package calculoDeIRPF;
+package calculoDeIRPF.tests;
 
 import static org.junit.Assert.*;
 
