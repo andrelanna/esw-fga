@@ -1,4 +1,4 @@
-package calculoDeIRPF.exceptions;
+package exceptions;
 
 public class RendimentoException extends Exception{
 	public static final String msg = "Excecao generica de Rendimentos.";

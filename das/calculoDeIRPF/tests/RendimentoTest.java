@@ -1,4 +1,4 @@
-package calculoDeIRPF.tests;
+package tests;
 
 import static org.junit.Assert.*;
 
@@ -7,7 +7,7 @@ import org.junit.FixMethodOrder;
 
 import calculoDeIRPF.IRPF;
 import calculoDeIRPF.Rendimento;
-import calculoDeIRPF.exceptions.RendimentosNulosException;
+import exceptions.RendimentosNulosException;
 
 import org.junit.Test;
 import org.junit.runners.MethodSorters;

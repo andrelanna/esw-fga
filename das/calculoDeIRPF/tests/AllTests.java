@@ -1,4 +1,4 @@
-package calculoDeIRPF.tests;
+package tests;
 
 import org.junit.FixMethodOrder;
 import org.junit.runner.RunWith;
