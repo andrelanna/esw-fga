@@ -1,0 +1,49 @@
+A)
+
+# TestCase
+Um TestCase define fixtures que serão utilizadas por classes de testes,
+ou seja, define variaveis e objetos que poderão ser usados por classes de testes
+que extendam o TestCase. É uma forma de criar configurações comuns a várias
+classes de testes.
+
+# TestSuite
+É um runner que permite a execução de um conjunto de classes de teste
+especificados pelo usuário. Através da anotação @SuiteClasses, o usuário lista
+todas as classes de teste que fazem parte da suite de testes.
+
+
+# Assert
+Asserts são métodos do framework JUNIT que recebe no geral 1 ou 2 parâmetros e
+que verifica se eles satisfazem os requerimentos necessários, retornando true
+caso satisfaça, e false caso não satisfaça.
+
+Há vários métodos de assert, dentre eles:
+- assertEqual: verifica se os dois parâmetros passados são iguais
+- assertTrue: verifica se o parâmetro passado é igual a true
+- assertFalse: verifica se o parâmetro passado é igual a false
+
+Caso os parâmetros não satisfaçam a condição do assert, o teste falha.
+
+# TestRunner
+Runners são classes que especificam como os casos de testes serão executados,
+sendo um ponto de extensão do JUNIT que permite a criação de formas
+especializadas de executar testes.
+
+B)
+- Suite: runner que permite a execução de um conjunto de classes de teste
+especificados pelo usuário. Através da anotação @SuiteClasses, o usuário lista
+todas as classes de teste que fazem parte da suite de testes.
+- Mockito: runner que permite a simulação do comportamento de classes
+através de Mocks. através da anotação @InjectMocks o usuário cria e injeta um
+mock no teste, e com a anotação @Mock o usuário cria um mock a ser injetado.
+Esse runner cria então métodos que ajudam a simular o comportamento esperado
+da classe ainda não implmentada (classe mockada)
+- MethodSorters: runner que permite a ordenação dos testes executados. Através
+da anotação @FixMethodOrder, o usuário especifica um dos métodos
+disponibilizados pelo runner.
+
+C)
+o JUNIT garante a independência dos testes criando uma instância do JUNIT para
+cada método de teste, estando todos eles isolados entre si. Assim, se dois
+metodos de testes instânciam uma classe Y, existe a garantia de que são
+instancias diferentes.
