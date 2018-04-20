@@ -1,0 +1,32 @@
+Questão 1
+
+a)  TestCase - Caso de teste é um caso específico que testa
+ uma determinada funcionalidade do sistema.
+
+    TestSuite - É um conjunto de casos de teste.
+
+    Assert - É uma verificação booleana. Caso todos os asserts
+ passem dentro do teste, o teste é dado como sucesso. Caso
+ um assert falhe, o teste inteiro é dado como falha.
+
+    TestRunner - Responsável por rodar os tests. Podendo ser um
+ TestSuite, Parameterized ou Categories.
+
+
+
+b)  TestSuite possui um conjunto de casos de teste, que podem ser
+ rodados ordenadamente ou não.
+
+    Parameterized é o teste parametizado, onde roda uma quantidade
+ de testes em cima de um caso de teste, variando seus parâmetros.
+
+    Categories é o teste categorizado, onde se pode-se rodar
+ determinadas categorias de teste filtrando os testes indesejados.
+
+
+c)  O JUnit promove que cada caso de teste rode em contexto diferente.
+ dentro de um caso de teste deve-se garantir entretanto que entre os 
+ testes também não aja interferência indesejada. Assim utiliza-se a função 
+ de setup para definir a configuração inicial que será rodada em cada 
+ teste, e o teardown que é rodado ao final de cada test.
+ 
