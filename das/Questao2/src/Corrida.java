@@ -22,7 +22,6 @@ public class Corrida {
 		}
 		
 		if(numBandeira != 1 && numBandeira != 2) {
-			System.out.print("Oi");
 			throw new BandeiraException();
 		}
 	}
