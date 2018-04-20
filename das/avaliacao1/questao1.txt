@@ -1,0 +1,25 @@
+Gustavo Lopes de Brito - 140142657
+
+Questão 1: O projeto do framework JUnit é composto da interface Test e das seguintes classes TestCase, TestSuite, Assert e TestRunner. Com relação às classes e interfaces acima faça o que se pede:
+
+a) Defina cada uma das classes/interface acima de modo a explicar sua função no Framework JUnit.
+
+    TestCase: Anotação que denota que o método é um teste, serve para mostrar que o método deve ser executado pelo JUnit.
+
+    TestSuite:  Classe que agrupa vários testes, de forma que todos são executados;
+
+    Assert: método de verificação, aonde são passados parâmetros que são verificados de forma a retornar valores de execução esperada ou inválida do teste escrito.
+
+    TestRunner: Classes que servem de extensão para execução de testes de forma personalizada, são exemplos a Paramaterized, MockitoJUnitRunner e Category. Cada um tem suas regras e possui de diversas anotações para modificar o comportamento dos testes.
+
+b) Liste e explique o modo de execução de ao menos 3 Runners.
+    Parameterized: Neste runner é necessário a criação de um métodoque retorna uma Collection com os parâmetros, utilizando da notação @Parameters, depois é necessário instanciar o construtor da classe de testes de forma a passar os parâmetros, e basta usar no teste esses atribuoos privados da classe, de forma que são testados diversos parâmetros.
+
+    MockitoJUnitRunner: Neste runner você utiliza da notação @InjectMocks para mockar os atributos da classe que possui outra que não foi implementada ainda, usa da notação @Mock para mockar a classe n implementada, e no test ao invocar o método que usa um método da classe mockada, utilizar do método when(invocacaoMetodo).thenReturn(resultadoMockado);
+    Depois basta dar o assert que a execução poderá ocorrer da forma esperada.
+
+    Category: Neste Runner, utiliza-se da notação @Categories.class de forma a extender sua classe de testes, depois você pode setar a classe ou métodos dentro da classe com categorias distintas, pode-se usar de interfaces placeholders para isso. Para adicionar categoria na suite de testes utiliza-se do comando @includeCategory de forma que passa-se as categorias que deseja-se executar.
+
+c) Como o framework JUnit garante a independência de testes?
+    No framework JUnit, os objetos são instanciados para cada testcase.
+    
