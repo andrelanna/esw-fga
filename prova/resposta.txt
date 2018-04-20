@@ -1,0 +1,41 @@
+Aluno: Thiago Nogueira Freire
+Matricula: 15/0047142
+
+Questão 1: O projeto do framework JUnit é composto da interface Test e das seguintes
+classes TestCase, TestSuite, Assert e TestRunner. Com relação às classes e interfaces
+acima faça o que se pede:
+
+a) Defina cada uma das classes/interface acima de modo a explicar sua função no
+Framework JUnit.
+TestCase é a classe que representa a calsse de teste para JUnit, a sua responsabilidade é definir 
+o que será de fato um teste e informar ao JUnit que aquele teste de fato deve ser rodado e considerado
+como um teste.
+
+TestSuite é a classe responsável por agrupar classes que contenham TestCases implementados. Facilitando
+a divisão de testes por classe que está sendo testada.
+
+Assert é a classe que possibilita a verificação dos testes, é atraveś dessa classe que é possível verificar
+se o retorno esperada está sendo obtido retorna o teste como correto ou falaha.
+
+TestRunner é a classe responsável por determinar como os testes iram ser executados, é esta classe que
+definie os parâmetros e como serão as regras de execução dos testes. É atraveś desta classe que fica possível
+personalizar como os testes serão executados.
+
+b) Liste e explique o modo de execução de ao menos 3 Runners.
+MockitoJUnitRunner - Runner que possibita a utilização do mock de classes que não foram implementadas ainda 
+por meio do @Mock e essas classes são necessárias para a realização de algum teste de outra class, a classe
+que irá receber o objeto mockado recebe a anotação de @InjectionMock devido a essa necessidade que acontece o mock de objetos.
+
+Parameterezide - Runner que permite a utilização de teste parametrizados, a anotação utilziada para os parâmetros
+são @Parameters e é uma função que que retorna uma Collections de vetores de Objects. Facilita pois não é preciso
+criar vários testes com diferentes valores, e sim um único teste e definir quais são os parâmetros de 
+entrada e qual é o resultado esperado
+
+
+Switch - Runner que possibilita execução de várias classes de teste em um mesmo arquivo faclitando assim
+a execução de múltiplos teste. Seu principal papel é agrupar classe de teste.
+
+
+c) Como o framework JUnit garante a independência de testes?
+O framework JUnit garantea independência dos testes criando um objeto da classe para cada teste com isso
+os testes se tornam indepente um do outro. O único problema que pode haver em relação a atributos estáticos.
