@@ -28,7 +28,7 @@ public class testeTarifa {
 	}
     
     public testeTarifa(double valor) {
-    	valorEsperado = tarifa.valorCorridaB1(100, 0);
+    	valorEsperado = tarifa.valorCorridaB1(tarifa);
     }
 
     @Test
@@ -39,5 +39,35 @@ public class testeTarifa {
     @Test
     public void testeBandeira2() {
         assertEquals(valorEsperado, Tarifa.valorCorridaB2());
+    }
+    
+    @Test
+    public void testeBandeira1Erro() {
+        assertNotEquals(valorEsperado, Tarifa.valorCorridaB1());
+    }
+    
+    @Test
+    public void testeBandeira2Erro() {
+        assertNotEquals(valorEsperado, Tarifa.valorCorridaB2());
+    }
+    
+    @Test
+    public void testeBandeira1SemKm() {
+        assertNotEquals(valorEsperado, Tarifa.valorCorridaB2());
+    }
+    
+    @Test
+    public void testeBandeira2SemKm() {
+        assertNotEquals(valorEsperado, Tarifa.valorCorridaB2());
+    }
+    
+    @Test
+    public void testeBandeira1SemHora() {
+        assertNotEquals(valorEsperado, Tarifa.valorCorridaB2());
+    }
+    
+    @Test
+    public void testeBandeira2SemHora() {
+        assertNotEquals(valorEsperado, Tarifa.valorCorridaB2());
     }
 }
