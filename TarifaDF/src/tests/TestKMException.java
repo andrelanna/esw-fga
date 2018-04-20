@@ -16,7 +16,7 @@ public class TestKMException {
 		tarifa = new Tarifa();
 	}
 	
-	@Test(expected = BandeiraException.class)
+	@Test(expected = KmException.class)
 	public void TestKMException() throws KmException, BandeiraException{
 		tarifa.calculoTarifa("Bandeira 1", 0, 10);
 	}
