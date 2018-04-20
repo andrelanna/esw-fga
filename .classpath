@@ -4,7 +4,7 @@
 	<classpathentry excluding="calculoDeIRPF/" kind="src" path="das"/>
 	<classpathentry kind="src" path="das/calculoDeIRPF"/>
 	<classpathentry kind="src" path="oo/IRPF/CalculoDeIRPF"/>
-	<classpathentry kind="src" path="avaliacao"/>
+	<classpathentry kind="src" path="avaliacao1"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

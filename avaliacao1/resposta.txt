@@ -14,9 +14,9 @@ TestRunner: Define como os testes serão executados, seja como serão passados o
 B)
 Parameterized: Define, para um construtor padrão, os dados de entrada do teste e os dados esperados do teste, diminuindo o número de testes necessários e aumentando o reuso de código.
 
-Mock(Mockito): Define, geralmente para um método não implementada, qual será a saída de um método, portanto não necessitando que um método esteja completo para que se possa ser testado.
+Mock(Mockito): Define, geralmente para um método não implementada, qual será a saída de um método a partir de um objeto simulado, portanto não necessitando que uma funcionalidade esteja completa para que possa ser testada. Com o "when(objetoMock.method(Entradas).thenReturn(RetornoDefinido))"
 
-Categories: Define o conjunto de testes que serão executados a partir de uma marcação feita em cada método, ou classe de testes inteira.
+Categories: Define o conjunto de testes que serão executados a partir de uma marcação feita em cada método, ou classe de testes inteira. Somente esses serão executados caso seja incluida a inerface que representa a marcação ou somente esses marcados não serão executados caso sejam excluidas da execução, com os marcadores @IncludeCategory e @ExcludeCategory respectivamente, a partir de uma Suite de testes. 
 
 C)
-O Junit cria um objeto para cada metodo de teste criado, assim garantindo que os testes sejam independentes. No entanto, caso esses methodos compartilhem algo, como um atributo de escopo de classe é necessário ordená-los para que um não dependa do outro.
+O Junit cria um objeto para cada metodo de teste criado, assim garantindo que os testes sejam independentes. No entanto, caso esses metodos compartilhem algo, como um atributo de escopo de classe é necessário ordená-los para que um não dependa do outro.
