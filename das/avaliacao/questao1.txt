@@ -1,0 +1,14 @@
+a)  Essa interface é responsavel pela notação @Test na qual indica que o metodo publico e de retorno void, é um caso de teste.
+    A classe TestCase é uma classe que define fixtures (estados fixos) para rodar multiplos testes.
+    A classe TestSuite é uma classe responsavel por gerenciar uma suíte de testes de diferentes classes.
+    Assert é uma classe que define múltiplos tipos de asserções que podem ser usadas nos test cases.
+    TestRunner é uma classe que pode recebeb uma classe de teste como argumento e gerencia instanciação, execução dos testes.
+
+b) - Suite: Um tipo de runner que possibilita construir uma suíte que contém diversos testes de diversas classes.
+   - Parameterized: Um tipo de runner que possibilita a implementação de testes parametrizados.
+   - Categories: Um tipo de runner que possibilita especificar grupos de testes para serem excluidos ou incluidos em uma suíte de teste.
+
+c) Para cada test um objeto é instanciado.
+
+
+
