@@ -1,0 +1,19 @@
+Aluno: Marco Antonio Rodrigues Loureiro Kuroiva
+Matrícula: 16/0160464
+Usuário no github: @MarcoRLK
+
+1 - 
+
+a - TestCase - Define um case de testes	com estados fixos (fixtures)
+	TestSuite - Define e gerencia uma suíte de testes
+	Assert - É a classe de assertivas que serve como condição para o teste passar. Nele você pode descrever aquilo que é esperado da exeução de algo.
+	TestRunner - Define como os testes devem ser executados
+
+b - 
+Suite - É um runner que representa um conjunto de testes, que você pode construir manualmente a partir de diferentes classes.
+
+Parameterized - Trata-se de um runner que serve para a execução de testes parametrizados, ou seja, você define previamente um conjunto de argumentos e de valores esperados para o método que será testado. O teste roda cada um dos cada parâmetro.
+
+Categories - Uma forma de separar os testes e executá-los conforme a necessidade é utilizando os categorias. Com o Categories você define conjuntos de testes, e pode remover ou incluir métodos de teste ao conjunto.
+
+c - O JUnit permite que você execute os testes independentemente um do outro instanciando um objeto diferente a cada vez que ele roda.
