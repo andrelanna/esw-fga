@@ -1,5 +1,7 @@
 package das.a1;
 
+import exceptions.KMException;
+
 public class Bandeira1 implements IBandeira {
 	Double bandeirada = 5.24;
 	Double kmRodados;

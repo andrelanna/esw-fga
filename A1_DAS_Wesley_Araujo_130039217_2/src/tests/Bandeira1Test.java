@@ -22,20 +22,20 @@ public class Bandeira1Test {
 	static Bandeira1 bandeira1;
 	
 	@Parameter(value = 0)
-	Double valueExpected;
+	public Double valueExpected;
 	
 	@Parameter(value = 1)
-	Double kmRodado;
+	public Double kmRodado;
 	
 	@Parameter(value = 2)
-	Double horasParadas;
+	public Double horasParadas;
 	
 	@Parameters 
 	public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {290.24, 100.0, 0.0},
-                {147.74, 50.0, 1.0},
-                {63.48, 30.0, 2.0}
+                {290.24, 100.0, 0.0}, // Exceção
+                {179.46, 50.0, 1.0},
+                {154.18, 30.0, 2.0}
         });
     }
 	
@@ -49,9 +49,9 @@ public class Bandeira1Test {
 		assertEquals(valueExpected, bandeira1.calculaValorTotal(kmRodado, horasParadas), 0.00);
 	}
 	
-	@Test(expected = BandeiraException.class)
-	public void testBandeiraNula() {
-		
-	}
+//	@Test(expected = BandeiraException.class)
+//	public void testBandeiraNula() {
+//		
+//	}
 
 }

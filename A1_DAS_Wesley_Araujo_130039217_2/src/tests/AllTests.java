@@ -15,7 +15,7 @@ import org.junit.*;
 import junit.framework.TestSuite;
 
 @RunWith(Suite.class)
-@SuiteClasses({Bandeira1.class})
+@SuiteClasses({Bandeira1.class, Bandeira2.class})
 public class AllTests {
 
 //	@Before
