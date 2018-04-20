@@ -1,0 +1,11 @@
+a)
+A classe TestCase é uma classe na qual a lógica de teste será implementada, utiliza os asserts para assegurar o valor de alguma coisa no teste.
+A classe TestSuite é uma classe que dá a possibilidade de agrupar diversas classes de teste em um único local
+Assert é uma classe que permite afirmar certas coisas sobre os retornos de funções, o valor atual de uma váriavel entre outras.
+
+b) 
+Suite: Após definir classes com seus respectivos testes, pode-se agrupar eles em um único local chamando esse runner.
+Parameterized: Permite usar um lista de valores em cada um dos testes da classe.
+Categories: Permite agrupar diferentes metodos de teste em um único grupo.
+
+c) Cada objeto criado pelos testes são isolados.
