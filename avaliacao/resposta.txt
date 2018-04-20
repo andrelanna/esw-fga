@@ -1,0 +1,22 @@
+Nome: Ronyell Henrique dos Santos
+Matrícula: 15/0046073
+
+Questão 1
+
+A) TestCase: É usada para que cada caso de teste possa ser desenvolvido. Implementa a classe teste.
+
+TestSuite: É um conjunto de casos de testes, utilizando o padrão composite, portanto, além de ser um um conjunto de casos de teste pode ser um conjunto de TestSuite. Já que implementa a classe Test.
+
+Assert: Utilizada para fazer assertivas, verificar se o valor de retorno é o esperado, não somente para números.
+
+TestRunner: Define como os testes serão executados, seja como serão passados os parâmetros iniciais(Parameterized), como serão simuladas partes do sistema que ainda não foram implementadas(Mock) ou quais serão executadas durante uma execução(Suite) de uma suite que não será completa(Categories), permitindo que os testes sejam executados de forma customizada.
+
+B)
+Parameterized: Define, para um construtor padrão, os dados de entrada do teste e os dados esperados do teste, diminuindo o número de testes necessários e aumentando o reuso de código.
+
+Mock(Mockito): Define, geralmente para um método não implementada, qual será a saída de um método, portanto não necessitando que um método esteja completo para que se possa ser testado.
+
+Categories: Define o conjunto de testes que serão executados a partir de uma marcação feita em cada método, ou classe de testes inteira.
+
+C)
+O Junit cria um objeto para cada metodo de teste criado, assim garantindo que os testes sejam independentes. No entanto, caso esses methodos compartilhem algo, como um atributo de escopo de classe é necessário ordená-los para que um não dependa do outro.
