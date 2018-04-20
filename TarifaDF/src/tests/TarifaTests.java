@@ -10,6 +10,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 
+import Exceptions.BandeiraException;
+import Exceptions.KmException;
 import tarifa.Tarifa;
 
 @RunWith(Parameterized.class)
@@ -21,7 +23,8 @@ public class TarifaTests {
 	int km;
 	int hrsParadas;
 	
-	public TarifaTests(String bandeira, int km, int hrsParadas){
+	public TarifaTests(double valorEsperado, String bandeira, int km, int hrsParadas){
+		this.valorEsperado = valorEsperado;
 		this.bandeira = bandeira;
 		this.km = km;
 		this.hrsParadas = hrsParadas;
@@ -34,11 +37,11 @@ public class TarifaTests {
 	
 	@Parameterized.Parameters
 	public static Collection values(){
-		return Arrays.asList(new Object[][] { {"Bandeira 1", 100, 0}, {"Bandeira 2", 100, 0}, {"Bandeira 1", 50, 1}, {"Bandeira 2", 50, 1}, {"Bandeira 1", 30, 2}, {"Bandeira 2", 30, 2} });
+		return Arrays.asList(new Object[][] { {290.24, "Bandeira 1", 100, 0}, {371.24, "Bandeira 2", 100, 0}, {179.46, "Bandeira 1", 50, 1}, {219.96, "Bandeira 2", 50, 1}, {154.18, "Bandeira 1", 30, 2}, {178.48, "Bandeira 2", 30, 2} });
 	}
 	
 	@Test
-	public void TesteTarifa(){
-		assertEquals(valorEsperado, tarifa.calculoTarifa(bandeira, km, hrsParadas));
+	public void TesteTarifa() throws BandeiraException, KmException{
+		assertEquals(valorEsperado, tarifa.calculoTarifa(bandeira, km, hrsParadas), 0.01);
 	}
 }
