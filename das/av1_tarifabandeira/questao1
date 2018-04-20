@@ -1,0 +1,30 @@
+Nome: Vinicius da Silva Carvalho
+Matricula: 13/0018431
+
+Questão 1
+a) Definição no Framework JUnit
+
+Função Interface Test:
+
+Função Classe TestCase: essa classe testa o resultado dos métodos de um método, implementar um conjunto de teste unitários.
+
+
+Função Classe TestSuite: essa classe faz que um único teste em mais de um método registrando os resultados, rodando um conjunto de testes pré-implementados.
+
+
+Função Classe Assert:responsável por realizar os métodos estáticos assertivos, validando um determinado resultado.
+
+
+Função Classe TestRunner: essa classe espera um TestCase como argumento, O TestRunner imprime um rastreio à medida que os testes são executados, seguido por um resumo no final.
+
+b) Modo de Execução de Runners
+* Enclosed: Se você colocar testes em classes internas, o Ant, por exemplo, não os encontrará. Ao executar a classe externa com Enclosed, os testes nas classes internas serão executados. Você pode colocar testes em classes internas para agrupá-los por conveniência ou para compartilhar constantes.
+
+*Paramaterized:
+
+* MockitoJUnitRunner:
+
+c) JUnit garante a independencia de testes
+Através da criação isolada de objetos testáveis, ou seja, para cada teste, uma instância de objeto é criada e realizado o teste naquele novo objeto, sem interferência da realização de testes anteriores.
+
+
