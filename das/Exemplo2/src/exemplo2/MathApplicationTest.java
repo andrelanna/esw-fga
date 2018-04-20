@@ -1,4 +1,4 @@
-package Exemplo2;
+package exemplo2;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.when;

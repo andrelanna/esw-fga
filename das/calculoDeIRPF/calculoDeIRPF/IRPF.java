@@ -1,8 +1,9 @@
+package calculoDeIRPF;
 
-import java.util.ArrayList; 
+import java.util.ArrayList;
 
-import calculoDeIRPF.exceptions.RendimentosNulosException;
 import calculoDeIRPF.exceptions.RendimentosVaziosException;
+import exceptions.RendimentosNulosException;
 
 public class IRPF {
 
