@@ -9,7 +9,13 @@ import categoriasTeste.CategoriaTesteFuncionalidade;
 
 @RunWith(Categories.class)
 @IncludeCategory(CategoriaTesteFuncionalidade.class)
-@SuiteClasses({TesteDeducao.class, TesteRendimento.class, TesteIRPF.class})
+@SuiteClasses({
+	TesteDeducao.class, 
+	TesteRendimento.class, 
+	TesteIRPF.class, 
+	TesteRendimento.class,
+	TesteDependente.class,
+})
 public class SuitFuncionalidades {
 
 }

@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -11,8 +12,10 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import calculoDeIRPF.Deducao;
 import calculoDeIRPF.Dependente;
+import categoriasTeste.CategoriaTesteFuncionalidade;
 
 @RunWith(MockitoJUnitRunner.class)
+@Category(CategoriaTesteFuncionalidade.class)
 public class TesteDependente {
 
 	@Mock
