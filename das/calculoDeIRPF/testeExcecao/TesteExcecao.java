@@ -1,16 +1,13 @@
 package testeExcecao;
 
-import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
-import org.junit.runners.MethodSorters;
 
 import calculoDeIRPF.IRPF;
 import calculoDeIRPF.exceptions.RendimentosVaziosException;
 import categoriasTeste.CategoriaTesteExcecao;
 import exceptions.RendimentosNulosException;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TesteExcecao {
 
 	@Test(expected=RendimentosNulosException.class)
