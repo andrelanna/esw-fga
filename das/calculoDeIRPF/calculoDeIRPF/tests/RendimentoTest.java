@@ -46,14 +46,15 @@ public class RendimentoTest {
 	}
 	
 	@Test
-	public void test1opasso_CadastroRendimentoUnico() throws RendimentosNulosException {
+	public void test1opasso_CadastroRendimentoUnico() throws RendimentosNulosException, RendimentosVaziosException{
 		String descricao = "Salario";
-		float valor = 5000f;
+		float valor = 5220.82f;
 		
 		Rendimento r = new Rendimento(descricao, valor); 
 		
 		System.out.println(1 + " " + irpf);
 		assertTrue(irpf.cadastrarRendimento(r));
+		System.out.println(irpf.totalImposto());
 		assertEquals(5000f, irpf.totalRendimentos(), 0f);
 		assertEquals(1, irpf.numRendimentos());
 	}
@@ -68,7 +69,6 @@ public class RendimentoTest {
 		System.out.println(3 + " " + irpf);
 		assertTrue(irpf.cadastrarRendimento(r));
 		
-		irpf.calcularImposto();
 		assertEquals(9000f, irpf.totalRendimentos(), 0f);
 		assertEquals(2, irpf.numRendimentos());
 	}

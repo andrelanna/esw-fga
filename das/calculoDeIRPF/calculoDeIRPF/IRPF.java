@@ -16,6 +16,17 @@ public class IRPF {
 	public ArrayList<Deducao> deducoes = new ArrayList<Deducao>();
 	ArrayList<Dependente> dependentes = new ArrayList<Dependente>();
 	ArrayList<Imposto> impostos = new ArrayList<Imposto>();
+	
+	public void addImpostos() {
+		for(int i = 0; i < 5; i++) {
+			Imposto imposto = new  Imposto((float)ALIQUOTA[i], (float)FAIXA[i]);
+			this.impostos.add(imposto);
+		}
+	}
+
+	public IRPF() {
+		this.addImpostos();
+	}
 
 	public static void cadastrarContribuinte(IRPF irpf) {
 		IRPF.contribuintes.add(irpf);
@@ -94,20 +105,30 @@ public class IRPF {
 		}
 	}
 	
-	public double calcularImposto() throws RendimentosVaziosException, RendimentosNulosException {
+	private void calcularImposto() throws RendimentosVaziosException, RendimentosNulosException {
 		double baseCalculo = this.calcularBaseDeCalculo();
 		
 		double imposto = 0.0f;
-		
+
 		for(int i = 4; i >= 0; i--) {
-			if (baseCalculo > FAIXA[i]) {
-				imposto += (baseCalculo - FAIXA[i]) * ALIQUOTA[i];
-				baseCalculo =  FAIXA[i];
+			if (baseCalculo > this.impostos.get(i).getBaseCalculo()) {
+				imposto = (baseCalculo - this.impostos.get(i).getBaseCalculo()) * this.impostos.get(i).getAliquota();
+				this.impostos.get(i).setValorImposto((float)imposto);
+				baseCalculo =  this.impostos.get(i).getBaseCalculo();
 			}
 		}
-		
-		return imposto;
 	}
 	
+	public double totalImposto() throws RendimentosVaziosException, RendimentosNulosException {
+		this.calcularImposto();
+		
+		double impostoTotal = 0.0f;
+
+		for(Imposto imposto: this.impostos) {
+			impostoTotal += imposto.getValorImposto();
+		}
+		
+		return impostoTotal;
+	}
 	
 }
