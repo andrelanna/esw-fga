@@ -7,8 +7,18 @@ import calculoDeIRPF.exceptions.RendimentosVaziosException;
 
 public class IRPF {
 
+	public static ArrayList<IRPF> contribuintes = new ArrayList<IRPF>();
 	ArrayList<Rendimento> rendimentos = new ArrayList<Rendimento>();
 	ArrayList<Deducao> deducoes = new ArrayList<Deducao>();
+	ArrayList<Dependente> dependentes = new ArrayList<Dependente>();
+
+	public static void cadastrarContribuinte(IRPF irpf) {
+		IRPF.contribuintes.add(irpf);
+	}
+	
+	public void cadastrarDependente(Dependente dependente) {
+		this.dependentes.add(dependente);
+	}
 	
 	public boolean cadastrarRendimento(Rendimento r) {
 		Rendimento temp = consultarRendimento(r.descricao);
@@ -59,6 +69,9 @@ public class IRPF {
 		for (Deducao d : deducoes){
 			soma += d.getValor();
 		}
+		
+		soma += Dependente.DEDUCAO * this.dependentes.size();
+		
 		return soma;
 	}
 
