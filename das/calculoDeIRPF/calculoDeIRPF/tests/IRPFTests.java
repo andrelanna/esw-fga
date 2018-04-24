@@ -11,6 +11,8 @@ import org.junit.runners.MethodSorters;
 import calculoDeIRPF.Deducao;
 import calculoDeIRPF.IRPF;
 import calculoDeIRPF.Rendimento;
+import calculoDeIRPF.exceptions.DeducaoNulaException;
+import calculoDeIRPF.exceptions.DeducaoVaziaException;
 import calculoDeIRPF.exceptions.RendimentosNulosException;
 import calculoDeIRPF.exceptions.RendimentosVaziosException;
 import calculoDeIRPF.IRPF.*;
@@ -41,7 +43,7 @@ public class IRPFTests {
 	}
 	
 	@Test
-	public void Test3NumDeRendimentos() {
+	public void Test3NumDeRendimentos() throws RendimentosNulosException {
 		int value = irpf.numRendimentos();
 		assertEquals(value, 1);
 	}
@@ -53,13 +55,13 @@ public class IRPFTests {
 	}
 	
 	@Test
-	public void Test5CadastrarDeducao() {
+	public void Test5CadastrarDeducao() throws DeducaoNulaException {
 		boolean value = irpf.cadastrarDedudacao(deducao);
 		assertTrue(value);
 	}
 	
 	@Test
-	public void Test6TotalDeducao() {
+	public void Test6TotalDeducao() throws DeducaoVaziaException {
 		float value = irpf.totalDeducoes();
 		assertEquals(value, 1f, 0.0f);
 	}

@@ -2,6 +2,8 @@ package calculoDeIRPF;
 
 import java.util.ArrayList;
 
+import calculoDeIRPF.exceptions.DeducaoNulaException;
+import calculoDeIRPF.exceptions.DeducaoVaziaException;
 import calculoDeIRPF.exceptions.RendimentosNulosException;
 import calculoDeIRPF.exceptions.RendimentosVaziosException;
 
@@ -41,8 +43,12 @@ public class IRPF {
 			return totalRendimentos;
 	}
 
-	public int numRendimentos() {
-		return rendimentos.size();
+	public int numRendimentos() throws RendimentosNulosException {
+		if(rendimentos != null) {
+			return rendimentos.size();
+		} else {
+			throw new RendimentosNulosException();
+		}
 	}
 
 	public Object[] getRendimentos() {
@@ -50,17 +56,25 @@ public class IRPF {
 		return resposta;
 	}
 
-	public boolean cadastrarDedudacao(Deducao d) {
-		boolean resposta = deducoes.add(d);
-		return resposta;
+	public boolean cadastrarDedudacao(Deducao d) throws DeducaoNulaException {
+		if(d != null) {
+			boolean resposta = deducoes.add(d);
+			return resposta;
+		} else {
+			throw new DeducaoNulaException();
+		}
 	}
 
-	public float totalDeducoes() {
+	public float totalDeducoes() throws DeducaoVaziaException {
 		float soma = 0f;
 		for (Deducao d : deducoes){
 			soma += d.getValor();
 		}
-		return soma;
+		if(soma != 0.0f) {
+			return soma;
+		} else {
+			throw new DeducaoVaziaException();
+		}
 	}
 
 	public int numTotalDeducoes() {

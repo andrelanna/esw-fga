@@ -15,6 +15,8 @@ import org.junit.runners.Parameterized.Parameters;
 
 import calculoDeIRPF.Deducao;
 import calculoDeIRPF.IRPF;
+import calculoDeIRPF.exceptions.DeducaoNulaException;
+import calculoDeIRPF.exceptions.DeducaoVaziaException;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 @RunWith(Parameterized.class)
@@ -48,7 +50,7 @@ public class DeducaoTest {
 	
 	
 	@Test
-	public void testCadastroDeducaoParametrizado() {
+	public void testCadastroDeducaoParametrizado() throws DeducaoNulaException, DeducaoVaziaException {
 		
 		boolean resposta = irpf.cadastrarDedudacao(this.deducao);
 		assertTrue(resposta); 
