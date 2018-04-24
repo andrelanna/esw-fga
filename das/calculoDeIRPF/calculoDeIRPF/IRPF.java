@@ -1,8 +1,9 @@
+package calculoDeIRPF;
 
 import java.util.ArrayList; 
 
-import calculoDeIRPF.exceptions.RendimentosNulosException;
 import calculoDeIRPF.exceptions.RendimentosVaziosException;
+
 
 public class IRPF {
 
@@ -29,12 +30,12 @@ public class IRPF {
 		return resposta;
 	}
 
-	public float totalRendimentos() throws RendimentosNulosException {
+	public float totalRendimentos() throws RendimentosVaziosException {
 		float totalRendimentos = 0f;
 		for (Rendimento r : rendimentos)
 			totalRendimentos += r.getValor();
 		if (totalRendimentos == 0) 
-			throw new RendimentosNulosException();
+			throw new RendimentosVaziosException();
 		else 
 			return totalRendimentos;
 	}

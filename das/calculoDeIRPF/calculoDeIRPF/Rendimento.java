@@ -1,3 +1,4 @@
+package calculoDeIRPF;
 
 public class Rendimento {
 
@@ -9,7 +10,6 @@ public class Rendimento {
 		this.descricao = descricao;
 		this.valor = valor;
 	}
-
 
 	public float getValor() {
 		return valor;
