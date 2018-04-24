@@ -16,6 +16,7 @@ import org.junit.runners.Parameterized.Parameters;
 import calculoDeIRPF.Deducao;
 import calculoDeIRPF.IRPF;
 import calculoDeIRPF.Imposto;
+import calculoDeIRPF.exceptions.ImpostoSizeException;
 
 @RunWith(Parameterized.class)
 public class ImpostoTest {
@@ -45,7 +46,7 @@ public class ImpostoTest {
 	
 	
 	@Test
-	public void testCadastroImpostoParametrizado() {
+	public void testCadastroImpostoParametrizado() throws ImpostoSizeException {
 		
 		boolean resposta = irpf.cadastrarImposto(this.imposto);
 		assertTrue(resposta); 

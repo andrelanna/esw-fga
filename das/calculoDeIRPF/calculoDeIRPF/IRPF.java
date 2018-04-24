@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import calculoDeIRPF.exceptions.DeducaoNulaException;
 import calculoDeIRPF.exceptions.DeducaoVaziaException;
+import calculoDeIRPF.exceptions.ImpostoSizeException;
 import calculoDeIRPF.exceptions.RendimentosNulosException;
 import calculoDeIRPF.exceptions.RendimentosVaziosException;
 
@@ -99,11 +100,16 @@ public class IRPF {
 		}
 	}
 	
-	public int numImposto() {
-		return impostos.size();
+	public int numImposto() throws ImpostoSizeException {
+		int impostoSize = impostos.size();
+		if(impostoSize <= 5) {
+			return impostoSize;
+		} else {
+			throw new ImpostoSizeException();
+		}
 	}
 	
-	public boolean cadastrarImposto(Imposto imp) { //TODO: Criar exception pra imposto.size > 5
+	public boolean cadastrarImposto(Imposto imp) {
 		return impostos.add(imp);
 	}
 	

@@ -27,4 +27,5 @@ public class DeducaoExceptionTest {
 	public void testDeducaoVazia() throws DeducaoVaziaException {
 		irpf.totalDeducoes();
 	}
+	
 }
