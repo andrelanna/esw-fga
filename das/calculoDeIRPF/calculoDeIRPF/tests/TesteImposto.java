@@ -50,7 +50,7 @@ public class TesteImposto {
 	}
 	
 	@Test
-	public void testCadastroDeducao() throws RendimentosVaziosException, RendimentosNulosException {
+	public void testImposto() throws RendimentosVaziosException, RendimentosNulosException {
 		irpf.setBaseDeCalculo(this.baseCalculo);
 		assertEquals(this.valorTotal, irpf.totalImposto(), 0.1f);
 		for(int i = 0; i < 5; i++) {

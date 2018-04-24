@@ -71,7 +71,7 @@ public class TesteDependente {
 	}
 	
 	@Test
-	public void testCadastroDeducao() throws RendimentosVaziosException, RendimentosNulosException {
+	public void testCadastroDependente() throws RendimentosVaziosException, RendimentosNulosException {
 		boolean resposta = irpf.adicionarDependente(this.dependente);
 		assertTrue(resposta);
 		assertEquals(this.valorTotal, irpf.totalDependentes(), 0.1f);
