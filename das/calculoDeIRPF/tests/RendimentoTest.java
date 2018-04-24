@@ -1,9 +1,10 @@
 import static org.junit.Assert.*;
-
+import calculoDeIRPF.IRPF;
+import calculoDeIRPF.Rendimento;
 import calculoDeIRPF.exceptions.RendimentosNulosException;
+
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
-
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 

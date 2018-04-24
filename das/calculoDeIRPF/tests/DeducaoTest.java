@@ -1,6 +1,7 @@
 import static org.junit.Assert.*;
-
 import calculoDeIRPF.Deducao;
+import calculoDeIRPF.IRPF;
+
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
