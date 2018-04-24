@@ -6,8 +6,11 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 
+import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
+import org.junit.runners.MethodSorters;
+
 import calculoDeIRPF.Deducao;
 import calculoDeIRPF.IRPF;
 import calculoDeIRPF.Rendimento;
@@ -16,6 +19,7 @@ import categoriasTeste.CategoriaTesteFuncionalidade;
 import exceptions.RendimentosNulosException;
 
 @Category(CategoriaTesteFuncionalidade.class)
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TesteIRPF {
 
 	@Test

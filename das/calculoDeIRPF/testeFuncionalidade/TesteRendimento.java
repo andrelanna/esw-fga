@@ -5,9 +5,11 @@ import static org.junit.Assert.assertEquals;
 import java.util.Arrays;
 import java.util.Collection;
 
+import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
+import org.junit.runners.MethodSorters;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
@@ -16,6 +18,7 @@ import categoriasTeste.CategoriaTesteFuncionalidade;
 
 @RunWith(Parameterized.class)
 @Category(CategoriaTesteFuncionalidade.class)
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TesteRendimento {
 	private String descricao;
 	private float valor, resultadoEsperado;

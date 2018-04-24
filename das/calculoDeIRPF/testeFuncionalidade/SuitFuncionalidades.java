@@ -10,11 +10,10 @@ import categoriasTeste.CategoriaTesteFuncionalidade;
 @RunWith(Categories.class)
 @IncludeCategory(CategoriaTesteFuncionalidade.class)
 @SuiteClasses({
-	TesteDeducao.class, 
-	TesteRendimento.class, 
-	TesteIRPF.class, 
-	TesteRendimento.class,
+	TesteDeducao.class,
 	TesteDependente.class,
+	TesteRendimento.class,
+	TesteIRPF.class,
 })
 public class SuitFuncionalidades {
 

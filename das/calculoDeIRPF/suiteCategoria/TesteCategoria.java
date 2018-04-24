@@ -12,7 +12,7 @@ import testeFuncionalidade.SuitFuncionalidades;
 
 @RunWith(Categories.class)
 @IncludeCategory({CategoriaTesteFuncionalidade.class, CategoriaTesteExcecao.class})
-@SuiteClasses({SuitFuncionalidades.class, TesteExcecao.class})
+@SuiteClasses({ TesteExcecao.class, SuitFuncionalidades.class })
 public class TesteCategoria {
 	public TesteCategoria() {
 	}
