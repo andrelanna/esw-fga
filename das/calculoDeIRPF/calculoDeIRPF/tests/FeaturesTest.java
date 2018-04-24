@@ -12,7 +12,7 @@ import calculoDeIRPF.TesteFuncionalidades;
 
 @RunWith(Categories.class)
 @Category(TesteFuncionalidades.class)
-@SuiteClasses({DeducaoTest.class}) // adicionar os outros parametros
+@SuiteClasses({DeducaoTest.class, RendimentoTest.class, ImpostoTest.class})
 public class FeaturesTest {
 
 }
