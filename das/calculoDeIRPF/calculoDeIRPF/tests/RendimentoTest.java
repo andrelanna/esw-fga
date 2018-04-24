@@ -8,6 +8,7 @@ import org.junit.FixMethodOrder;
 import calculoDeIRPF.IRPF;
 import calculoDeIRPF.Rendimento;
 import calculoDeIRPF.exceptions.RendimentosNulosException;
+import calculoDeIRPF.exceptions.RendimentosVaziosException;
 
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
@@ -58,7 +59,7 @@ public class RendimentoTest {
 	}
 	
 	@Test
-	public void test3opasso_CadastroAluguel() throws RendimentosNulosException {
+	public void test3opasso_CadastroAluguel() throws RendimentosNulosException, RendimentosVaziosException {
 		String descricao = "Aluguel"; 
 		float valor = 1000f;
 		
@@ -66,6 +67,8 @@ public class RendimentoTest {
 		
 		System.out.println(3 + " " + irpf);
 		assertTrue(irpf.cadastrarRendimento(r));
+		
+		irpf.calcularImposto();
 		assertEquals(9000f, irpf.totalRendimentos(), 0f);
 		assertEquals(2, irpf.numRendimentos());
 	}

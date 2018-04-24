@@ -19,7 +19,7 @@ public class RendimentosVaziosTest {
 	}
 	
 	@Test(expected = RendimentosVaziosException.class)
-	public void testBaseDeCalculoSemRendimentos() throws RendimentosVaziosException {
+	public void testBaseDeCalculoSemRendimentos() throws RendimentosVaziosException, RendimentosNulosException {
 		irpf.calcularBaseDeCalculo();
 	}
 	

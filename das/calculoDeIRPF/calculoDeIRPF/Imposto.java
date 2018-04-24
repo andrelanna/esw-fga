@@ -5,10 +5,9 @@ public class Imposto {
 	private float baseCalculo;
 	private float valorImposto;
 	
-	public Imposto(float aliquota, float baseCalculo, float valorImposto) {
+	public Imposto(float aliquota, float baseCalculo) {
 		this.aliquota = aliquota;
 		this.baseCalculo = baseCalculo;
-		this.valorImposto = valorImposto;
 	}
 
 	public float getAliquota() {
