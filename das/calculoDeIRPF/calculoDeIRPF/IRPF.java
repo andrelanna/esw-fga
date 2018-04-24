@@ -10,13 +10,21 @@ public class IRPF {
 	public static final double[] ALIQUOTA = {0.0, 0.075, 0.15, 0.225, 0.275};
 	public static final double[] FAIXA = {0.0, 1903.98, 2826.66, 3751.06, 4664.68};
 
-
 	public static ArrayList<IRPF> contribuintes = new ArrayList<IRPF>();
 	ArrayList<Rendimento> rendimentos = new ArrayList<Rendimento>();
 	public ArrayList<Deducao> deducoes = new ArrayList<Deducao>();
 	ArrayList<Dependente> dependentes = new ArrayList<Dependente>();
 	ArrayList<Imposto> impostos = new ArrayList<Imposto>();
+	private float baseDeCalculo;
 	
+	public float getBaseDeCalculo() {
+		return baseDeCalculo;
+	}
+
+	public void setBaseDeCalculo(float baseDeCalculo) {
+		this.baseDeCalculo = baseDeCalculo;
+	}
+
 	public void addImpostos() {
 		for(int i = 0; i < 5; i++) {
 			Imposto imposto = new  Imposto((float)ALIQUOTA[i], (float)FAIXA[i]);
@@ -96,17 +104,17 @@ public class IRPF {
 		return count;
 	}
 
-	public float calcularBaseDeCalculo() throws RendimentosVaziosException, RendimentosNulosException {
+	public void calcularBaseDeCalculo() throws RendimentosVaziosException, RendimentosNulosException {
 		if (rendimentos.isEmpty()) {
 			throw new RendimentosVaziosException();
 		}else {
 			float baseDeCalculo = this.totalRendimentos() - this.totalDeducoes(); 
-			return baseDeCalculo;
+			this.baseDeCalculo = baseDeCalculo;
 		}
 	}
 	
 	private void calcularImposto() throws RendimentosVaziosException, RendimentosNulosException {
-		double baseCalculo = this.calcularBaseDeCalculo();
+		double baseCalculo = this.baseDeCalculo;
 		
 		double imposto = 0.0f;
 
@@ -130,5 +138,15 @@ public class IRPF {
 		
 		return impostoTotal;
 	}
+
+	public ArrayList<Imposto> getImpostos() {
+		return impostos;
+	}
+
+	public void setImpostos(ArrayList<Imposto> impostos) {
+		this.impostos = impostos;
+	}
+	
+	
 	
 }
