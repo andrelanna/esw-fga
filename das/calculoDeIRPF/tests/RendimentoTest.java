@@ -1,16 +1,16 @@
 package calculoDeIRPF.tests;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
+import org.junit.Test;
+import org.junit.runners.MethodSorters;
 
 import calculoDeIRPF.IRPF;
 import calculoDeIRPF.Rendimento;
 import calculoDeIRPF.exceptions.RendimentosNulosException;
-
-import org.junit.Test;
-import org.junit.runners.MethodSorters;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 //@FixMethodOrder(MethodSorters.JVM)

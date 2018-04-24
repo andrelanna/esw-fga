@@ -1,5 +1,6 @@
+package calculoDeIRPF;
 
-import java.util.ArrayList; 
+import java.util.ArrayList;
 
 import calculoDeIRPF.exceptions.RendimentosNulosException;
 import calculoDeIRPF.exceptions.RendimentosVaziosException;
@@ -8,6 +9,7 @@ public class IRPF {
 
 	ArrayList<Rendimento> rendimentos = new ArrayList<Rendimento>();
 	ArrayList<Deducao> deducoes = new ArrayList<Deducao>();
+	ArrayList<Dependente> dependentes = new ArrayList<Dependente>();
 	
 	public boolean cadastrarRendimento(Rendimento r) {
 		Rendimento temp = consultarRendimento(r.descricao);
@@ -65,7 +67,17 @@ public class IRPF {
 		int count = deducoes.size();
 		return count;
 	}
-
+	
+	public boolean cadastrarDependente(Dependente dp) {
+		boolean resposta = dependentes.add(dp);
+		return resposta;
+	}
+	
+	public int numTotalDependentes() {
+		int qtdDp = dependentes.size();
+		return qtdDp;
+	}
+	
 	public float calcularBaseDeCalculo() throws RendimentosVaziosException  {
 		if (rendimentos.isEmpty())
 			throw new RendimentosVaziosException();

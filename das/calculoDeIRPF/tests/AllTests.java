@@ -10,5 +10,5 @@ import org.junit.runners.Suite.SuiteClasses;
 @SuiteClasses({ DeducaoTest.class, RendimentoTest.class, RendimentosVaziosTest.class })
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class AllTests {
-
+	
 }
