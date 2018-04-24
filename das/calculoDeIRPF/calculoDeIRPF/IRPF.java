@@ -1,5 +1,6 @@
+package calculoDeIRPF;
 
-import java.util.ArrayList; 
+import java.util.ArrayList;
 
 import calculoDeIRPF.exceptions.RendimentosNulosException;
 import calculoDeIRPF.exceptions.RendimentosVaziosException;
@@ -8,6 +9,7 @@ public class IRPF {
 
 	ArrayList<Rendimento> rendimentos = new ArrayList<Rendimento>();
 	ArrayList<Deducao> deducoes = new ArrayList<Deducao>();
+	ArrayList<Imposto> impostos = new ArrayList<Imposto>();
 	
 	public boolean cadastrarRendimento(Rendimento r) {
 		Rendimento temp = consultarRendimento(r.descricao);
@@ -76,6 +78,15 @@ public class IRPF {
 			}
 			return baseDeCalculo;
 		}
+	}
+	
+	public boolean cadastrarImposto(Imposto imp) {
+		final int nFaixas = 5;
+		if(impostos.size() == nFaixas) {
+			return false;
+		}
+		
+		return impostos.add(imp);
 	}
 	
 }
