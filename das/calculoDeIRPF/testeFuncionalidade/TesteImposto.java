@@ -6,13 +6,16 @@ import java.util.Arrays;
 import java.util.Collection;
 
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 import calculoDeIRPF.Imposto;
+import categoriasTeste.CategoriaTesteFuncionalidade;
 
 @RunWith(Parameterized.class)
+@Category(CategoriaTesteFuncionalidade.class)
 public class TesteImposto {
 	private float aliquota;
 	private float baseCalculo;

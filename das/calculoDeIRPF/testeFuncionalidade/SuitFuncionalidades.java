@@ -13,6 +13,7 @@ import categoriasTeste.CategoriaTesteFuncionalidade;
 	TesteDeducao.class,
 	TesteDependente.class,
 	TesteRendimento.class,
+	TesteImposto.class,
 	TesteIRPF.class,
 })
 public class SuitFuncionalidades {
