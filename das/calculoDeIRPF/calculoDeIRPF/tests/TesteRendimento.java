@@ -1,12 +1,10 @@
 package calculoDeIRPF.tests;
 
 import static org.junit.Assert.*;
-import static org.mockito.MockitoAnnotations.initMocks;
 
 import java.util.Arrays;
 import java.util.Collection;
 
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -16,7 +14,6 @@ import org.junit.runners.Parameterized.Parameters;
 
 import calculoDeIRPF.IRPF;
 import calculoDeIRPF.Rendimento;
-import calculoDeIRPF.category.CategoriaDeducao;
 import calculoDeIRPF.category.CategoriaRendimento;
 import calculoDeIRPF.exceptions.RendimentosNulosException;
 

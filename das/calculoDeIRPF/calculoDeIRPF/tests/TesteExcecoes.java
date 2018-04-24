@@ -5,7 +5,6 @@ import org.junit.Test;
 import org.junit.experimental.categories.Category;
 
 import calculoDeIRPF.IRPF;
-import calculoDeIRPF.category.CategoriaDependente;
 import calculoDeIRPF.category.CategoriaException;
 import calculoDeIRPF.exceptions.RendimentoException;
 import calculoDeIRPF.exceptions.RendimentosNulosException;

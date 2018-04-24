@@ -14,7 +14,6 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 import calculoDeIRPF.IRPF;
-import calculoDeIRPF.category.CategoriaDeducao;
 import calculoDeIRPF.category.CategoriaImposto;
 import calculoDeIRPF.exceptions.RendimentosNulosException;
 import calculoDeIRPF.exceptions.RendimentosVaziosException;

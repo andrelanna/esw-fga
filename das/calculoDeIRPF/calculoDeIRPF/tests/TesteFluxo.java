@@ -18,57 +18,68 @@ import calculoDeIRPF.exceptions.RendimentosVaziosException;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TesteFluxo {
 
-	public static IRPF irpf;
-	
+	public static IRPF contribuinte1;
+	public static IRPF contribuinte2;
+
 	@Mock
     Dependente dependente;
 	
 	
 	@BeforeClass
 	public static void setup() {
-		irpf = new IRPF();
+		contribuinte1 = new IRPF();
+		contribuinte2 = new IRPF();
 	}
 	
 	@Test
 	public void teste01AdicionaRendimento() throws RendimentosNulosException {
 		Rendimento r = new Rendimento("rendimento1", 1000.0f);
 		
-		boolean resposta = irpf.cadastrarRendimento(r);
+		boolean resposta = contribuinte1.cadastrarRendimento(r);
 		assertTrue(resposta); 
-		assertEquals(1000f, irpf.totalRendimentos(), 0.1f);
-		assertEquals(1, irpf.numRendimentos());
+		assertEquals(1000f, contribuinte1.totalRendimentos(), 0.1f);
+		assertEquals(1, contribuinte1.numRendimentos());
 	}
 
 	@Test
 	public void teste02AdicionaDependente() {
-		boolean resposta = irpf.adicionarDependente(this.dependente);
+		boolean resposta = contribuinte1.adicionarDependente(this.dependente);
 		assertTrue(resposta);
-		assertEquals(189.5, irpf.totalDependentes(), 0.1f);
-		assertEquals(1, irpf.getDependentes().size());
+		assertEquals(189.5, contribuinte1.totalDependentes(), 0.1f);
+		assertEquals(1, contribuinte1.getDependentes().size());
 	}
 	
 	@Test
 	public void teste03AdicionaDeducao() {
 		Deducao d = new Deducao("Deducao1", 100f);
 		
-		boolean resposta = irpf.cadastrarDedudacao(d);
+		boolean resposta = contribuinte1.cadastrarDedudacao(d);
 		assertTrue(resposta); 
-		assertEquals(100f, irpf.totalDeducoes(), 0.1f);
-		assertEquals(1, irpf.numTotalDeducoes());
+		assertEquals(100f, contribuinte1.totalDeducoes(), 0.1f);
+		assertEquals(1, contribuinte1.numTotalDeducoes());
 	}
 	
 	@Test
 	public void teste04BaseDeCalculo() throws RendimentosVaziosException, RendimentosNulosException {
-		irpf.calcularBaseDeCalculo();
-		assertEquals(710.41f, irpf.getBaseDeCalculo(), 0.1f);
+		contribuinte1.calcularBaseDeCalculo();
+		assertEquals(710.41f, contribuinte1.getBaseDeCalculo(), 0.1f);
 		for(int i = 0; i < 5; i++) {
-			assertEquals(0.0f, irpf.getImpostos().get(i).getValorImposto(), 0.1f);
+			assertEquals(0.0f, contribuinte1.getImpostos().get(i).getValorImposto(), 0.1f);
 		}
 	}
 	
 	@Test
 	public void teste05CalculoImposto() throws RendimentosVaziosException, RendimentosNulosException {
-		//TODO Fazer o teste que calcula imposto
+		double imposto = contribuinte1.totalImposto();
+		
+		assertEquals(0.0f, imposto, 0.0f);
+	}
+		
+	@Test
+	public void teste06QuantidadeContribuintes() throws RendimentosVaziosException, RendimentosNulosException {		
+		IRPF.contribuintes.add(contribuinte1);
+		IRPF.contribuintes.add(contribuinte2);
+		assertEquals(2, IRPF.contribuintes.size());
 	}
 
 }

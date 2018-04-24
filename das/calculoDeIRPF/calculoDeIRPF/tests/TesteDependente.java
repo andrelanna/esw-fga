@@ -17,7 +17,6 @@ import org.mockito.Mock;
 
 import calculoDeIRPF.Dependente;
 import calculoDeIRPF.IRPF;
-import calculoDeIRPF.category.CategoriaDeducao;
 import calculoDeIRPF.category.CategoriaDependente;
 import calculoDeIRPF.exceptions.RendimentosNulosException;
 import calculoDeIRPF.exceptions.RendimentosVaziosException;
