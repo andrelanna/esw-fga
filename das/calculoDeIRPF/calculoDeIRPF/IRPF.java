@@ -17,9 +17,20 @@ public class IRPF {
 	ArrayList<Imposto> impostos = new ArrayList<Imposto>();
 	private float baseDeCalculo;
 	
+	
+	public boolean adicionarDependente(Dependente dependente) {
+		boolean resposta = this.dependentes.add(dependente);
+		return resposta;
+	}
+	
 	public float getBaseDeCalculo() {
 		return baseDeCalculo;
 	}
+	
+	public ArrayList<Dependente> getDependentes() {
+		return dependentes;
+	}
+
 
 	public void setBaseDeCalculo(float baseDeCalculo) {
 		this.baseDeCalculo = baseDeCalculo;
@@ -93,8 +104,14 @@ public class IRPF {
 		for (Deducao d : deducoes){
 			soma += d.getValor();
 		}
-		
-		// soma += Dependente.DEDUCAO * this.dependentes.size();
+				
+		return soma;
+	}
+	
+	public float totalDependentes() {
+		float soma = 0f;
+
+		soma += Dependente.DEDUCAO * this.dependentes.size();
 		
 		return soma;
 	}
@@ -108,7 +125,7 @@ public class IRPF {
 		if (rendimentos.isEmpty()) {
 			throw new RendimentosVaziosException();
 		}else {
-			float baseDeCalculo = this.totalRendimentos() - this.totalDeducoes(); 
+			float baseDeCalculo = this.totalRendimentos() - (this.totalDeducoes() + this.totalDependentes()); 
 			this.baseDeCalculo = baseDeCalculo;
 		}
 	}
@@ -146,7 +163,4 @@ public class IRPF {
 	public void setImpostos(ArrayList<Imposto> impostos) {
 		this.impostos = impostos;
 	}
-	
-	
-	
 }
