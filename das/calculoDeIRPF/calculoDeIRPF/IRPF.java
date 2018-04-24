@@ -76,6 +76,11 @@ public class IRPF {
 			for (Rendimento r : rendimentos) {
 				baseDeCalculo += r.getValor();
 			}
+			
+			for (Deducao d : deducoes) {
+				baseDeCalculo -= d.getValor();
+			}
+			
 			return baseDeCalculo;
 		}
 	}
