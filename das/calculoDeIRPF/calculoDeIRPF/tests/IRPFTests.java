@@ -15,7 +15,6 @@ import calculoDeIRPF.exceptions.DeducaoNulaException;
 import calculoDeIRPF.exceptions.DeducaoVaziaException;
 import calculoDeIRPF.exceptions.RendimentosNulosException;
 import calculoDeIRPF.exceptions.RendimentosVaziosException;
-import calculoDeIRPF.IRPF.*;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class IRPFTests {
