@@ -80,12 +80,11 @@ public class IRPF {
 		}
 	}
 	
-	public boolean cadastrarImposto(Imposto imp) {
-		final int nFaixas = 5;
-		if(impostos.size() == nFaixas) {
-			return false;
-		}
-		
+	public int numImposto() {
+		return impostos.size();
+	}
+	
+	public boolean cadastrarImposto(Imposto imp) { //TODO: Criar exception pra imposto.size > 5
 		return impostos.add(imp);
 	}
 	
