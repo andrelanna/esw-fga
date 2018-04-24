@@ -12,7 +12,8 @@ public class IRPF {
 	
 	private ArrayList<Rendimento> rendimentos = new ArrayList<Rendimento>();
 	private ArrayList<Deducao> deducoes = new ArrayList<Deducao>();
-	private float baseDeCalculo = 0f;
+	private ArrayList<Dependente> dependentes = new ArrayList<Dependente>();
+	
 	
 	
 	public boolean cadastrarRendimento(Rendimento r) {
@@ -31,6 +32,10 @@ public class IRPF {
 	
 	public boolean cadastratarContribuinte(IRPF c){
 		return contribuintes.add(c);
+	}
+	
+	public boolean cadastrarDependente(Dependente d){
+		return this.dependentes.add(d);
 	}
 	
 
@@ -84,7 +89,7 @@ public class IRPF {
 		if (rendimentos.isEmpty())
 			throw new RendimentosVaziosException();
 		else {
-			float baseDeCalculo = 0; 
+			float baseDeCalculo = 0;
 			for (Rendimento r : rendimentos) {
 				baseDeCalculo += r.getValor();
 			}
@@ -96,11 +101,13 @@ public class IRPF {
 		
 		Imposto i = new Imposto();
 		
-		i.aliquota = 1;
-		i.baseCalculo = this.baseDeCalculo;
-		i.valorImposto = 1;
+		i.baseCalculo = calcularBaseDeCalculo();
+		i.aliquota = Aliquota.calcular(i.baseCalculo);
+		i.deducoes = this.totalDeducoes();
 		
 		return i;
 	}
+	
+
 	
 }
