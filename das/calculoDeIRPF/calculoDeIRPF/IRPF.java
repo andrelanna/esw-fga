@@ -7,11 +7,18 @@ import calculoDeIRPF.exceptions.RendimentosVaziosException;
 
 public class IRPF {
 
-	ArrayList<Rendimento> rendimentos = new ArrayList<Rendimento>();
-	ArrayList<Deducao> deducoes = new ArrayList<Deducao>();
+	
+	public static ArrayList<IRPF> contribuintes = new ArrayList<IRPF>();
+	
+	private ArrayList<Rendimento> rendimentos = new ArrayList<Rendimento>();
+	private ArrayList<Deducao> deducoes = new ArrayList<Deducao>();
+	private float baseDeCalculo = 0f;
+	
 	
 	public boolean cadastrarRendimento(Rendimento r) {
+		
 		Rendimento temp = consultarRendimento(r.descricao);
+		
 		if (temp != null) {
 			rendimentos.remove(temp);
 			r.valor += temp.valor;
@@ -20,6 +27,12 @@ public class IRPF {
 		boolean resposta = rendimentos.add(r);
 		return resposta;
 	}
+	
+	
+	public boolean cadastratarContribuinte(IRPF c){
+		return contribuintes.add(c);
+	}
+	
 
 	private Rendimento consultarRendimento(String descricao) {
 		Rendimento resposta = null;
@@ -77,6 +90,17 @@ public class IRPF {
 			}
 			return baseDeCalculo;
 		}
+	}
+	
+	public Imposto calcularImposto() throws Exception {
+		
+		Imposto i = new Imposto();
+		
+		i.aliquota = 1;
+		i.baseCalculo = this.baseDeCalculo;
+		i.valorImposto = 1;
+		
+		return i;
 	}
 	
 }
