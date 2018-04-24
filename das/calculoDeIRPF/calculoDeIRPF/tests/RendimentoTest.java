@@ -2,72 +2,58 @@ package calculoDeIRPF.tests;
 
 import static org.junit.Assert.*;
 
+import java.util.Arrays;
+import java.util.Collection;
+
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 
+import calculoDeIRPF.Deducao;
 import calculoDeIRPF.IRPF;
 import calculoDeIRPF.Rendimento;
 import calculoDeIRPF.exceptions.RendimentosNulosException;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
 
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
-//@FixMethodOrder(MethodSorters.JVM)
+
+@RunWith(Parameterized.class)
 public class RendimentoTest {
 
 	static IRPF irpf;
+	Rendimento r;
+	float expected;
+	int num;
 	
 	@BeforeClass
 	public static void setup() {
 		irpf = new IRPF();
 	}
 	
-
-	@Test(expected = ArrayIndexOutOfBoundsException.class)
-	public void test0opasso_AcessarRendimentoNaoCadastrado() {
-		Object[] rends = irpf.getRendimentos();
-		Object r = rends[0];
+	public RendimentoTest(Rendimento r, float expected, int num) {
+		this.r = r;
+		this.expected = expected;
+		this.num = num;
 	}
 	
-	
-	@Test
-	public void test2opasso_CadastrarRendimentoDuplicado() throws RendimentosNulosException {
-		String descricao = "Salario"; 
-		float valor = 3000f;
-		
-		System.out.println(2 + " " + irpf);
-		Rendimento r = new Rendimento(descricao, valor);
-		
-		assertTrue(irpf.cadastrarRendimento(r));
-		assertEquals(8000f, irpf.totalRendimentos(), 0f);
-		assertEquals(1, irpf.numRendimentos());
+	@Parameters
+	public static Collection<Object[]> data(){
+		return Arrays.asList(new Object[][] {
+			{new Rendimento("Salario", 5000f), 5000f, 1},
+			{new Rendimento("Aluguel", 1500f), 6500f, 2},
+			{new Rendimento("Reembolo de Despesas", 1000f), 7500f, 3},
+		});
 	}
 	
 	@Test
-	public void test1opasso_CadastroRendimentoUnico() throws RendimentosNulosException {
-		String descricao = "Salario";
-		float valor = 5000f;
+	public void testCadastroRendimentoParametrizado() throws RendimentosNulosException { 
 		
-		Rendimento r = new Rendimento(descricao, valor); 
-		
-		System.out.println(1 + " " + irpf);
-		assertTrue(irpf.cadastrarRendimento(r));
-		assertEquals(5000f, irpf.totalRendimentos(), 0f);
-		assertEquals(1, irpf.numRendimentos());
-	}
-	
-	@Test
-	public void test3opasso_CadastroAluguel() throws RendimentosNulosException {
-		String descricao = "Aluguel"; 
-		float valor = 1000f;
-		
-		Rendimento r = new Rendimento(descricao, valor); 
-		
-		System.out.println(3 + " " + irpf);
-		assertTrue(irpf.cadastrarRendimento(r));
-		assertEquals(9000f, irpf.totalRendimentos(), 0f);
-		assertEquals(2, irpf.numRendimentos());
+		assertTrue(irpf.cadastrarRendimento(this.r));
+		assertEquals(this.expected, irpf.totalRendimentos(), 0f);
+		assertEquals(this.num, irpf.numRendimentos());
 	}
 
 }
