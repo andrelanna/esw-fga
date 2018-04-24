@@ -9,6 +9,7 @@ import java.util.Collection;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
@@ -16,10 +17,13 @@ import org.mockito.Mock;
 
 import calculoDeIRPF.Dependente;
 import calculoDeIRPF.IRPF;
+import calculoDeIRPF.category.CategoriaDeducao;
+import calculoDeIRPF.category.CategoriaDependente;
 import calculoDeIRPF.exceptions.RendimentosNulosException;
 import calculoDeIRPF.exceptions.RendimentosVaziosException;
 
 @RunWith(Parameterized.class)
+@Category(CategoriaDependente.class)
 public class TesteDependente {
 	
 	static IRPF irpf; 

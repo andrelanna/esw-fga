@@ -7,14 +7,17 @@ import java.util.Collection;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 import calculoDeIRPF.Deducao;
 import calculoDeIRPF.IRPF;
+import calculoDeIRPF.category.CategoriaDeducao;
 
 @RunWith(Parameterized.class)
+@Category(CategoriaDeducao.class)
 public class TesteDeducao {
 	
 	static IRPF irpf; 

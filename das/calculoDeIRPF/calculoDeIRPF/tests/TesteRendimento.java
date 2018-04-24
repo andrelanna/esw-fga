@@ -9,15 +9,19 @@ import java.util.Collection;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 import calculoDeIRPF.IRPF;
 import calculoDeIRPF.Rendimento;
+import calculoDeIRPF.category.CategoriaDeducao;
+import calculoDeIRPF.category.CategoriaRendimento;
 import calculoDeIRPF.exceptions.RendimentosNulosException;
 
 @RunWith(Parameterized.class)
+@Category(CategoriaRendimento.class)
 public class TesteRendimento {
 	
 	static IRPF irpf; 
