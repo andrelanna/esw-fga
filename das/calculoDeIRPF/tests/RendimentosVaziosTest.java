@@ -1,4 +1,4 @@
-package calculoDeIRPF.tests;
+package tests;
 
 import org.junit.Before;
 import org.junit.Test;
