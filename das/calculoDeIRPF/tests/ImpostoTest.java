@@ -8,6 +8,8 @@ import org.junit.Test;
 
 import calculoDeIRPF.Deducao;
 import calculoDeIRPF.IRPF;
+import calculoDeIRPF.exceptions.ImpostoNuloException;
+import calculoDeIRPF.exceptions.RendimentosNulosException;
 
 public class ImpostoTest {
 	
@@ -41,4 +43,10 @@ public class ImpostoTest {
 		assertEquals(2, irpf.numTotalDeducoes());
 	}
 
+	@Test(expected = ImpostoNuloException.class)
+	public void testCalculoImpostoSemRendimentos() throws ImpostoNuloException {
+		//irpf.calculaImposto();
+	}
+
+	
 }
