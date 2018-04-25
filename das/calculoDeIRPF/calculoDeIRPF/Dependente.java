@@ -1,3 +1,5 @@
+package calculoDeIRPF;
+
 public class Dependente {
 	double deducao = 189.58;
 	String nome;

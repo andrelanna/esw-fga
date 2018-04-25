@@ -8,6 +8,7 @@ import java.util.Collection;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
 import org.junit.runners.Parameterized;
@@ -15,9 +16,12 @@ import org.junit.runners.Parameterized.Parameters;
 import org.junit.runners.Parameterized.Parameter;
 import calculoDeIRPF.Deducao;
 import calculoDeIRPF.IRPF;
+import tests.Categories.DeducaoCategory;
+import tests.Categories.RendimentoCategory;
 
 @RunWith(Parameterized.class)
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@Category(DeducaoCategory.class)
 public class DeducaoTest {
 
 	static IRPF irpf; 
