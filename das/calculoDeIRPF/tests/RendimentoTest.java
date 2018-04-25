@@ -7,6 +7,7 @@ import java.util.Collection;
 
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
+import org.mockito.Mock;
 
 import calculoDeIRPF.IRPF;
 import calculoDeIRPF.Rendimento;
@@ -25,7 +26,7 @@ import org.junit.runners.MethodSorters;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 @Category(RendimentoCategory.class)
 public class RendimentoTest {
-
+	@Mock
 	static IRPF irpf;
 	
 	@BeforeClass
