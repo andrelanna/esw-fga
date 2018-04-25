@@ -15,7 +15,6 @@ public class IRPF {
 	private ArrayList<Dependente> dependentes = new ArrayList<Dependente>();
 	
 	
-	
 	public boolean cadastrarRendimento(Rendimento r) {
 		
 		Rendimento temp = consultarRendimento(r.descricao);
