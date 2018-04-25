@@ -20,13 +20,6 @@ public class RendimentoTest {
 	}
 	
 
-	@Test(expected = ArrayIndexOutOfBoundsException.class)
-	public void test0opasso_AcessarRendimentoNaoCadastrado() {
-		Object[] rends = irpf.getRendimentos();
-		Object r = rends[0];
-	}
-	
-	
 	@Test
 	public void test2opasso_CadastrarRendimentoDuplicado() throws RendimentosNulosException {
 		String descricao = "Salario"; 
