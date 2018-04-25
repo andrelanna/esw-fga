@@ -7,7 +7,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ TesteCategorias.class, TesteFluxo.class })
+@SuiteClasses({ TesteCategorias.class })
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class AllTests {
