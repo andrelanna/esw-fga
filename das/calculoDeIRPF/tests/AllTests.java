@@ -5,7 +5,7 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ DeducaoTest.class, RendimentoTest.class, DependenteTest.class, TesteExcecoes.class })
+@SuiteClasses({ DeducaoTest.class, RendimentoTest.class, DependenteTest.class, TesteExcecoes.class, IRPFTest.class })
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class AllTests {
 
