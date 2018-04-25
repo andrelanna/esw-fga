@@ -25,6 +25,7 @@ public class Imposto {
 	}
 	
 	public float valorImposto(){
-		return ( baseCalculo * (1 - aliquota) ) - deducoes;
+		float result = ( baseCalculo * (1 - aliquota/100) ) - deducoes;
+		return result > 0? result:0;
 	}
 }
