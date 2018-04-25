@@ -8,7 +8,7 @@ import calculoDeIRPF.exceptions.RendimentosVaziosException;
 public class IRPF {
 
 	
-	public static ArrayList<IRPF> contribuintes = new ArrayList<IRPF>();
+	public ArrayList<IRPF> contribuintes = new ArrayList<IRPF>();
 	
 	private ArrayList<Rendimento> rendimentos = new ArrayList<Rendimento>();
 	private ArrayList<Deducao> deducoes = new ArrayList<Deducao>();
@@ -30,7 +30,7 @@ public class IRPF {
 	
 	
 	public boolean cadastratarContribuinte(IRPF c){
-		return contribuintes.add(c);
+		return c == this ? false : contribuintes.add(c);
 	}
 	
 	public boolean cadastrarDependente(Dependente d){
