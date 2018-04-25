@@ -11,16 +11,19 @@ import org.junit.FixMethodOrder;
 import calculoDeIRPF.IRPF;
 import calculoDeIRPF.Rendimento;
 import exceptions.RendimentosNulosException;
+import tests.Categories.RendimentoCategory;
+
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 import org.junit.runner.RunWith;
 
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import org.junit.runners.MethodSorters;
 
 @RunWith(Parameterized.class)
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-//@FixMethodOrder(MethodSorters.JVM)
+@Category(RendimentoCategory.class)
 public class RendimentoTest {
 
 	static IRPF irpf;
