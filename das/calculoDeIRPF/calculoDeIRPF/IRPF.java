@@ -93,6 +93,10 @@ public class IRPF {
 				baseDeCalculo += r.getValor();
 			}
 			
+			for (Dependente d : dependentes){
+				baseDeCalculo -= d.deducao;
+			}
+			
 			return baseDeCalculo;
 		}
 	}
