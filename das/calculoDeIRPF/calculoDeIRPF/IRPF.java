@@ -99,11 +99,11 @@ public class IRPF {
 	
 	public Imposto calcularImposto() throws Exception {
 		
-		Imposto i = new Imposto();
+		float base = calcularBaseDeCalculo();
+		float aliquota = Aliquota.calcular(base);
+		float deducs = this.totalDeducoes();
 		
-		i.baseCalculo = calcularBaseDeCalculo();
-		i.aliquota = Aliquota.calcular(i.baseCalculo);
-		i.deducoes = this.totalDeducoes();
+		Imposto i = new Imposto(base, aliquota, deducs);
 		
 		return i;
 	}
