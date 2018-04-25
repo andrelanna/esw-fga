@@ -1,4 +1,4 @@
-package calculoDeIRPF;
+
 
 import static org.mockito.Mockito.when;
 
@@ -9,6 +9,11 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 
+import calculoDeIRPF.Deducao;
+import calculoDeIRPF.Dependente;
+import calculoDeIRPF.DependenteService;
+import calculoDeIRPF.IRPF;
+import calculoDeIRPF.Rendimento;
 import calculoDeIRPF.calculoDeIRPF.exceptions.RendimentosVaziosException;
 
 public class IRPFTest {
