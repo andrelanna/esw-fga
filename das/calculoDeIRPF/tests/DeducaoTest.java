@@ -14,6 +14,7 @@ import org.junit.runners.MethodSorters;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 import org.junit.runners.Parameterized.Parameter;
+import org.mockito.Mock;
 import calculoDeIRPF.Deducao;
 import calculoDeIRPF.IRPF;
 import tests.Categories.DeducaoCategory;
@@ -23,7 +24,8 @@ import tests.Categories.RendimentoCategory;
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 @Category(DeducaoCategory.class)
 public class DeducaoTest {
-
+	
+	@Mock 
 	static IRPF irpf; 
 	
 	@BeforeClass

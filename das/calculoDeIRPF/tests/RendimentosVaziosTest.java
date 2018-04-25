@@ -10,11 +10,12 @@ import calculoDeIRPF.IRPF;
 import exceptions.RendimentosNulosException;
 import tests.Categories.ExceptionsCategory;
 import tests.Categories.RendimentoCategory;
+import org.mockito.Mock;
 import calculoDeIRPFExceptions.RendimentosVaziosException;
 
 @Category(ExceptionsCategory.class)
 public class RendimentosVaziosTest {
-
+	@Mock
 	IRPF irpf;
 	
 	@Before
