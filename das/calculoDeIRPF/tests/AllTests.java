@@ -7,12 +7,8 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
-@SuiteClasses({ DeducaoTest.class,
-				RendimentoTest.class,
-				RendimentosVaziosTest.class,
-				ParameterizedExampleTests.class,
-				ParameterizedExampleWithoutConstructTests.class
-				})
+@SuiteClasses({ TesteCategorias.class, TesteFluxo.class })
+
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class AllTests {
 
