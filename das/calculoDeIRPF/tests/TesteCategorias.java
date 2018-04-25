@@ -12,7 +12,7 @@ import testCategories.TesteParametrizado;
 
 @RunWith(Categories.class)
 @IncludeCategory()
-@SuiteClasses({ RendimentosVaziosTest.class, TesteFuncionalidade.class })
+@SuiteClasses({ ExceptionTests.class, TesteFuncionalidade.class })
 public class TesteCategorias {
 
 }
