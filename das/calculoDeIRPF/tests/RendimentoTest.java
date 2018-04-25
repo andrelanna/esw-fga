@@ -8,7 +8,6 @@ import java.util.Collection;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 
-import calculoDeIRPF.Deducao;
 import calculoDeIRPF.IRPF;
 import calculoDeIRPF.Rendimento;
 import exceptions.RendimentosNulosException;
@@ -58,6 +57,11 @@ public class RendimentoTest {
            });
     }
 	
+	@Test(expected = ArrayIndexOutOfBoundsException.class)
+	public void test0opasso_AcessarRendimentoNaoCadastrado() {
+		Object[] rends = irpf.getRendimentos();
+		Object r = rends[9]; // this array doesn't have the 9th element
+	}
 	
 	@Test
 	public void parameterizedDeducaoTest() throws RendimentosNulosException {
