@@ -1,4 +1,4 @@
-package calculoDeIRPF.tests;
+package tests;
 
 import static org.junit.Assert.*;
 
@@ -6,8 +6,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import calculoDeIRPF.IRPF;
-import calculoDeIRPF.exceptions.RendimentosNulosException;
-import calculoDeIRPF.exceptions.RendimentosVaziosException;
+import exceptions.RendimentosNulosException;
+import calculoDeIRPFExceptions.RendimentosVaziosException;
 
 public class RendimentosVaziosTest {
 
