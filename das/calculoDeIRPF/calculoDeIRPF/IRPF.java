@@ -4,6 +4,7 @@ package calculoDeIRPF;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
+import calculoDeIRPF.exceptions.ImpostoNuloException;
 import calculoDeIRPF.exceptions.RendimentosNulosException;
 import calculoDeIRPF.exceptions.RendimentosVaziosException;
 
@@ -92,7 +93,7 @@ public class IRPF {
 		}
 	}
 	
-	public double calculaBase() throws RendimentosNulosException{
+	public double calculaBase() throws RendimentosNulosException {
 		
 		float calculoBase;
 		float rendimentoTotal = totalRendimentos();
@@ -103,7 +104,7 @@ public class IRPF {
 		return calculoBase;
 	}
 	
-	public void calculaImposto() throws RendimentosNulosException{
+	public double calculaImposto() throws ImpostoNuloException, RendimentosNulosException {
 		
 		DecimalFormat df = new DecimalFormat("#.00");
 		float calculoBase = (float) calculaBase();
@@ -118,7 +119,8 @@ public class IRPF {
 			else
 				valorParcial = 1903.98;
 			parcialFinal = parcialFinal-valorParcial;
-			System.out.println("Faixa 1\t "+valorParcial +"\t R$"+ df.format(valorImposto));
+			valorImposto += parcialFinal;
+			//System.out.println("Faixa 1\t "+valorParcial +"\t R$"+ df.format(valorImposto));
 		}
 		if(calculoBase>1903.98 && calculoBase <= 2826.66 || calculoBase > (calculoBase-2826.66)){
 			if(calculoBase<=2826.66)
@@ -128,7 +130,8 @@ public class IRPF {
 			
 			valorImposto = valorParcial*0.075;
 			parcialFinal = parcialFinal- valorParcial;
-			System.out.println("Faixa 2\t "+df.format(valorParcial) +"\t R$"+ df.format(valorImposto));
+			valorImposto += parcialFinal;
+			//System.out.println("Faixa 2\t "+df.format(valorParcial) +"\t R$"+ df.format(valorImposto));
 		}
 		if(calculoBase <= 3751.06 && calculoBase > 2826.66 || calculoBase > (calculoBase-2826.66)){
 			if(calculoBase<=3751.06)
@@ -138,7 +141,8 @@ public class IRPF {
 			
 			valorImposto = valorParcial*0.15;
 			parcialFinal = parcialFinal- valorParcial;
-			System.out.println("Faixa 3\t "+df.format(valorParcial) +"\t R$"+ df.format(valorImposto));
+			valorImposto += parcialFinal;
+			//System.out.println("Faixa 3\t "+df.format(valorParcial) +"\t R$"+ df.format(valorImposto));
 		}
 		if(calculoBase <= 4682.69 && calculoBase>3751.06 || calculoBase > (calculoBase-3751.06)){
 			if(calculoBase<=4682.69)
@@ -148,14 +152,15 @@ public class IRPF {
 			
 			valorImposto = valorParcial*0.225;
 			parcialFinal = parcialFinal- valorParcial;
-			System.out.println("Faixa 4\t "+df.format(valorParcial) +"\t R$"+ df.format(valorImposto));
+			valorImposto += parcialFinal;
+			//System.out.println("Faixa 4\t "+df.format(valorParcial) +"\t R$"+ df.format(valorImposto));
 		}
 		if(calculoBase>4682.69){
-			valorParcial = parcialFinal;
-			valorImposto = valorParcial*0.275;
-			System.out.println("Faixa 5\t "+df.format(valorParcial) +"\t R$"+ df.format(valorImposto));
+			valorImposto += (parcialFinal*0.275);
+			//valorImposto = valorParcial*0.275;
+			//System.out.println("Faixa 5\t "+df.format(valorParcial) +"\t R$"+ df.format(valorImposto));
 		}
-		//return valorImposto;
+		return valorImposto;
 		
 	
 	}

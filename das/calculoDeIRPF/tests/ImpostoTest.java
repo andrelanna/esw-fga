@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import calculoDeIRPF.Deducao;
 import calculoDeIRPF.IRPF;
+import calculoDeIRPF.Imposto;
 import calculoDeIRPF.exceptions.ImpostoNuloException;
 import calculoDeIRPF.exceptions.RendimentosNulosException;
 
@@ -19,33 +20,10 @@ public class ImpostoTest {
 	public static void setup() {
 		irpf = new IRPF();
 	}
-	
-	
-	@Test
-	public void testCadastroPrimeiraDeducao() {
-		Deducao d = new Deducao("Contribuicao previdenciaria", 
-				                2000f);
-		
-		boolean resposta = irpf.cadastrarDedudacao(d);
-		assertTrue(resposta); 
-		assertEquals(2000f, irpf.totalDeducoes(), 0f);
-		assertEquals(1, irpf.numTotalDeducoes());
-	}
-	
-	@Test 
-	public void testCadastroSegundaDeducao() {
-		Deducao d = new Deducao("Plano de Saude", 
-				                500f);
-		
-		boolean resposta = irpf.cadastrarDedudacao(d);
-		assertTrue(resposta);
-		assertEquals(2500f, irpf.totalDeducoes(), 0f);
-		assertEquals(2, irpf.numTotalDeducoes());
-	}
 
-	@Test(expected = ImpostoNuloException.class)
-	public void testCalculoImpostoSemRendimentos() throws ImpostoNuloException {
-		//irpf.calculaImposto();
+	@Test(expected= RendimentosNulosException.class)
+	public void testCalculoImpostoSemRendimentos() throws ImpostoNuloException, RendimentosNulosException {
+		irpf.calculaImposto();
 	}
 
 	
