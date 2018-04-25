@@ -2,10 +2,15 @@ package tests;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
+
 import calculoDeIRPF.IRPF;
 import exceptions.RendimentosNulosException;
 import calculoDeIRPFExceptions.RendimentosVaziosException;
+import tests.Categories.ExceptionsCategory;;
 
+
+@Category(ExceptionsCategory.class)
 public class ExceptionsTest {
 
 	static IRPF irpf_variable;
