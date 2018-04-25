@@ -92,17 +92,22 @@ public class IRPF {
 			for (Rendimento r : rendimentos) {
 				baseDeCalculo += r.getValor();
 			}
+			
+			for (Dependente d : dependentes){
+				baseDeCalculo -= d.deducao;
+			}
+			
 			return baseDeCalculo;
 		}
 	}
 	
 	public Imposto calcularImposto() throws Exception {
 		
-		Imposto i = new Imposto();
+		float base = calcularBaseDeCalculo();
+		float aliquota = Aliquota.calcular(base);
+		float deducs = this.totalDeducoes();
 		
-		i.baseCalculo = calcularBaseDeCalculo();
-		i.aliquota = Aliquota.calcular(i.baseCalculo);
-		i.deducoes = this.totalDeducoes();
+		Imposto i = new Imposto(base, aliquota, deducs);
 		
 		return i;
 	}

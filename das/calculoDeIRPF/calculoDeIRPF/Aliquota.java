@@ -9,13 +9,13 @@ public class Aliquota {
 		if(rendimento < 1903.98){
 			v = 0;
 		}else if(rendimento < 2826.65){
-			v = 7.5f/100f; 
+			v = 7.5f;
 		}else if(rendimento < 3751.05){
-			v = 15/100f;
+			v = 15;
 		}else if(rendimento < 4664.68){
-			v = 22.5f/100f;
+			v = 22.5f;
 		}else{
-			v = 27.5f/100f;
+			v = 27.5f;
 		}
 		
 		return v;
