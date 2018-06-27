@@ -1,6 +1,13 @@
 # Trabalho Final Ruby on Rails
 
-## 1. O que é FrameWork
+## Pergunta 1
+1.1 - O que é framework? <br>
+1.2 - Qual seu propósito (desenvolvimento web, mobile, frontend)?  <br>
+1.3 - Como ele é estruturado (há diagrama de classes, arquitetural, dentre outros)?  <br>
+1.4 - Quais são os pontos de extensão de funcionalidades desse framework (hot-spots)? <br>
+1.5 Qual o modelo de componente definido para o framework? Ele está publicamente definido e acessível? <br>
+
+### 1.1 O que é FrameWork
 
   Um framework é um conjunto lógico que tem por objetivo fornecer uma estrutura lógica comum entre projetos, podendo ser utilizado em âmbito organizacional como no caso dos framework de desenvolvimento ou em escopo de código.
 
@@ -8,17 +15,17 @@
 
   Para que ocorra a reutilização de código os frameworks possuem pontos de extensão para suas funcionalidades estes podendo ser divididos entre hotspots e frozen spots, onde os hot spots são pontos de extensão permissivos onde adaptações no código podem ser realizadas, geralmente por herança, e os frozen spots são pontos onde não há a possibilidade de alteração da lógica imposta pelo framework.
 
-  ## 2. Ruby on Rails
+  ## 1.2. Ruby on Rails
 
-  ### 2.1 Propósito
+  ### 1.2 Propósito
 
   O framework ruby on rails e voltado para o desenvolvimento de aplicações web na linguagem ruby, prestando auxílio em quesitos comuns em aplicações web como requisições, protocolos HTTP, armazenamento em banco de dados entre outros.
 
   Para realizar essas funções o ruby on rails tenta engessar o desenvolvimento ao padrão arquitetural model-views-controller prestando pontos de extensão para cada camada do modelo arquitetural.
 
-  ### 2.2 Estrutura
+  ### 1.3 Estrutura
 
-  #### 2.2.1 Módulos
+  #### 1.3.1 Módulos
 
   ***Action Mailer***
 
