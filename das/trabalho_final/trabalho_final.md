@@ -50,17 +50,28 @@
 
   ***Active Model***
 
-  Define um modo de acesso entre a controller e a active Record. 
+  Define um modo de acesso entre a controller e a active Record.
 
   ***Active Record***
 
   Esse módulo é responsável pelo mapeamento objeto relacional das classes, é acessada através de hotspots, onde é feito o mapeamento das classes filha no banco de dados.
 
 ### 1.4 Principais Pontos de Extensão
-Os principais pontos de extensão do Rails são os arquivos das Models e os arquivo das Controllers: 
+Os principais pontos de extensão do Rails são os arquivos das Models e os arquivo das Controllers:
 
 ActionController e ApplicationRecord.
 
 **ActionController** é um módulo (module), ou seja, uma coleção de métodos e constantes que dão vida as controllers do Rails. Esse módulo é extendido em todas as controllers de um projeto em Rails, assim o desevolvedor tem uma conexão entre lógica de negócio (controller), as ações do banco de dados (através da model) e também entre a demonstração de dados para o cliente através das views. Cada controller possui a implementação das conexões HTTP (definidas nas rotas), desde de o entendimento de diferentes formatos, por exemplo o JSON, como também na interpretação dos parâmentros que são passados em cada requisição. A ActionController consegue lidar com isso tudo ser receber alterações do usuário desenvolvedor. Assim o desenvoldor consegue trabalhar com as controllers do Rails sem se preocupar com toda essa parte genérica de conexões.
 
 **ApplicationRecord**
+
+## 3 Comunicação entre os Componentes
+
+A comunicação entre os Componentes do Ruby on Rails pode ser observado e analisado a partir de 2 modos de visualização, sendo um deles o Module View, que apresenta todos os componentes do framework de forma estática, e outro chama-se Component & Connector View, que exibe os componentes da forma com que eles existem em tempo de execução e como eles se comunicam entre si.
+
+![module_view](./imgs/static_view.png)
+Imagem 1 - Module View
+
+
+![cc_view](./imgs/dynamic_view.png)
+Imagem 2 - Component & Connector View
