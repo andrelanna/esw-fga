@@ -1,11 +1,8 @@
 # Trabalho Final Ruby on Rails
 
 ## Pergunta 1
-1.1 - O que é framework? <br>
-1.2 - Qual seu propósito (desenvolvimento web, mobile, frontend)?  <br>
-1.3 - Como ele é estruturado (há diagrama de classes, arquitetural, dentre outros)?  <br>
-1.4 - Quais são os pontos de extensão de funcionalidades desse framework (hot-spots)? <br>
-1.5 Qual o modelo de componente definido para o framework? Ele está publicamente definido e acessível? <br>
+### 1 - O que é framework? Qual seu propósito (desenvolvimento web, mobile, frontend)? Como ele é estruturado (há diagrama de classes, arquitetural, dentre outros)? Quais são os pontos de extensão de funcionalidades desse framework (hot-spots)? <br>
+- Qual o modelo de componente definido para o framework? Ele está publicamente definido e acessível? <br>
 
 ### 1.1 O que é FrameWork
 
@@ -68,22 +65,20 @@ ActionController e ApplicationRecord.
 ### 1.5 Modelo de Componente definido para o Rails
 
 ## Pergunta 2
-2.1 - O que é um componente de software para o framework adotado e como ele é estruturado?<br>
-2.2 - Como os detalhes de sua implementação são ocultados dos framework?<br>
-2.3 - Como suas interfaces de comunicação / composição devem ser definidas?<br>
-2.4 - Como componentes de software são adaptados para o framework sob investigação? Glue-code? Herança? Adapter? etc...
+### 2 - O que é um componente de software para o framework adotado e como ele é estruturado? Como os detalhes de sua implementação são ocultados dos framework? Como suas interfaces de comunicação / composição devem ser definidas?<br>
+- Como componentes de software são adaptados para o framework sob investigação? Glue-code? Herança? Adapter? etc...
 
 ## Pergunta 3
-3.1 - Quais são os modos  geralmente utilizados para composição componentes / frameworks?<br>
-3.2 - Como se dá a comunicação entre componentes / framework?<br>
-3.3 - Há um diagrama comportamental (sequencia, colaboração, etc) que demonstre tal comunicação?
+### 3 - Quais são os modos  geralmente utilizados para composição componentes / frameworks?<br>
+- Como se dá a comunicação entre componentes / framework?<br>
+- Há um diagrama comportamental (sequencia, colaboração, etc) que demonstre tal comunicação?
 
-### 3 Comunicação entre os Componentes
+### Comunicação entre os Componentes
 
-A comunicação entre os Componentes do Ruby on Rails pode ser observado e analisado a partir de 2 modos de visualização em UML, sendo um deles o Module View, que apresenta todos os componentes do framework de forma estática, e outro chama-se Component & Connector View, que exibe os componentes da forma com que eles existem em tempo de execução e como eles se comunicam entre si.
+A comunicação entre os Componentes do Ruby on Rails pode ser observada e analisada a partir de 2 modos de visualização em UML, sendo um deles o Module View, que apresenta todos os componentes do framework de forma estática, e outro chama-se Component & Connector View, que exibe os componentes da forma com que eles existem em tempo de execução e como eles se comunicam entre si.
 
-![module_view](./imgs/static_view.png)
+![module_view](./imgs/static_view.png)<br>
 Imagem 1 - Module View
 
-![cc_view](./imgs/dynamic_view.png)
+![cc_view](./imgs/dynamic_view.png)<br>
 Imagem 2 - Component & Connector View
