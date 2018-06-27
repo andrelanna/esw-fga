@@ -61,17 +61,29 @@ Os principais pontos de extensão do Rails são os arquivos das Models e os arqu
 
 ActionController e ApplicationRecord.
 
-**ActionController** é um módulo (module), ou seja, uma coleção de métodos e constantes que dão vida as controllers do Rails. Esse módulo é extendido em todas as controllers de um projeto em Rails, assim o desevolvedor tem uma conexão entre lógica de negócio (controller), as ações do banco de dados (através da model) e também entre a demonstração de dados para o cliente através das views. Cada controller possui a implementação das conexões HTTP (definidas nas rotas), desde de o entendimento de diferentes formatos, por exemplo o JSON, como também na interpretação dos parâmentros que são passados em cada requisição. A ActionController consegue lidar com isso tudo ser receber alterações do usuário desenvolvedor. Assim o desenvoldor consegue trabalhar com as controllers do Rails sem se preocupar com toda essa parte genérica de conexões.
+**ActionController** é um módulo (module), ou seja, uma coleção de métodos e constantes que dão vida as controllers do Rails. Esse módulo é estendido em todas as controllers de um projeto em Rails, assim o desevolvedor tem uma conexão entre lógica de negócio (controller), as ações do banco de dados (através da model) e também entre a demonstração de dados para o cliente através das views. Cada controller possui a implementação das conexões HTTP (definidas nas rotas), desde de o entendimento de diferentes formatos, por exemplo o JSON, como também na interpretação dos parâmentros que são passados em cada requisição. A ActionController consegue lidar com isso tudo ser receber alterações do usuário desenvolvedor. Assim o desenvoldor consegue trabalhar com as controllers do Rails sem se preocupar com toda essa parte genérica de conexões.
 
-**ApplicationRecord**
+**ActiveRecord** é também um módulo do Rails, responsável por representar os dados e a lógica de negocio de cada entidade do banco de dados. As classes do Rails, localizadas na model, estendem do ActiveRecord. É um ponto de extensão incrível do Rails pois permite que o desenvolvedor crie tabelas, regras de negocio para essas tabelas ([as validations](http://guides.rubyonrails.org/active_record_validations.html)) sem escrever nada em linguagem de banco, sql ou qualquer coisa do tipo. É um módulo que automatiza uma importante atividade do desenvolvimento web, porém que mantém flexivel o suficiente para que o desenvolvedor consiga usar nos mais variados cenários. Além disso o ActiveRecord já adiciona em cada classe os métodos de CRUD, além de vários outros métodos que são úteis no desenvolvimento web, como os callbacks de DB por exemplo.
 
-## 3 Comunicação entre os Componentes
+### 1.5 Modelo de Componente definido para o Rails
 
-A comunicação entre os Componentes do Ruby on Rails pode ser observado e analisado a partir de 2 modos de visualização, sendo um deles o Module View, que apresenta todos os componentes do framework de forma estática, e outro chama-se Component & Connector View, que exibe os componentes da forma com que eles existem em tempo de execução e como eles se comunicam entre si.
+## Pergunta 2
+2.1 - O que é um componente de software para o framework adotado e como ele é estruturado?<br>
+2.2 - Como os detalhes de sua implementação são ocultados dos framework?<br>
+2.3 - Como suas interfaces de comunicação / composição devem ser definidas?<br>
+2.4 - Como componentes de software são adaptados para o framework sob investigação? Glue-code? Herança? Adapter? etc...
+
+## Pergunta 3
+3.1 - Quais são os modos  geralmente utilizados para composição componentes / frameworks?<br>
+3.2 - Como se dá a comunicação entre componentes / framework?<br>
+3.3 - Há um diagrama comportamental (sequencia, colaboração, etc) que demonstre tal comunicação?
+
+### 3 Comunicação entre os Componentes
+
+A comunicação entre os Componentes do Ruby on Rails pode ser observado e analisado a partir de 2 modos de visualização em UML, sendo um deles o Module View, que apresenta todos os componentes do framework de forma estática, e outro chama-se Component & Connector View, que exibe os componentes da forma com que eles existem em tempo de execução e como eles se comunicam entre si.
 
 ![module_view](./imgs/static_view.png)
 Imagem 1 - Module View
-
 
 ![cc_view](./imgs/dynamic_view.png)
 Imagem 2 - Component & Connector View
