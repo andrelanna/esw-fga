@@ -1,6 +1,10 @@
+package calculoDeIRPF;
 
-import java.util.ArrayList; 
+import java.util.ArrayList;
 
+import calculoDeIRPF.exceptions.DeducaoNulaException;
+import calculoDeIRPF.exceptions.DeducaoVaziaException;
+import calculoDeIRPF.exceptions.ImpostoSizeException;
 import calculoDeIRPF.exceptions.RendimentosNulosException;
 import calculoDeIRPF.exceptions.RendimentosVaziosException;
 
@@ -8,6 +12,7 @@ public class IRPF {
 
 	ArrayList<Rendimento> rendimentos = new ArrayList<Rendimento>();
 	ArrayList<Deducao> deducoes = new ArrayList<Deducao>();
+	ArrayList<Imposto> impostos = new ArrayList<Imposto>();
 	
 	public boolean cadastrarRendimento(Rendimento r) {
 		Rendimento temp = consultarRendimento(r.descricao);
@@ -39,8 +44,12 @@ public class IRPF {
 			return totalRendimentos;
 	}
 
-	public int numRendimentos() {
-		return rendimentos.size();
+	public int numRendimentos() throws RendimentosNulosException {
+		if(rendimentos != null) {
+			return rendimentos.size();
+		} else {
+			throw new RendimentosNulosException();
+		}
 	}
 
 	public Object[] getRendimentos() {
@@ -48,17 +57,25 @@ public class IRPF {
 		return resposta;
 	}
 
-	public boolean cadastrarDedudacao(Deducao d) {
-		boolean resposta = deducoes.add(d);
-		return resposta;
+	public boolean cadastrarDedudacao(Deducao d) throws DeducaoNulaException {
+		if(d != null) {
+			boolean resposta = deducoes.add(d);
+			return resposta;
+		} else {
+			throw new DeducaoNulaException();
+		}
 	}
 
-	public float totalDeducoes() {
+	public float totalDeducoes() throws DeducaoVaziaException {
 		float soma = 0f;
 		for (Deducao d : deducoes){
 			soma += d.getValor();
 		}
-		return soma;
+		if(soma != 0.0f) {
+			return soma;
+		} else {
+			throw new DeducaoVaziaException();
+		}
 	}
 
 	public int numTotalDeducoes() {
@@ -74,8 +91,26 @@ public class IRPF {
 			for (Rendimento r : rendimentos) {
 				baseDeCalculo += r.getValor();
 			}
+			
+			for (Deducao d : deducoes) {
+				baseDeCalculo -= d.getValor();
+			}
+			
 			return baseDeCalculo;
 		}
+	}
+	
+	public int numImposto() throws ImpostoSizeException {
+		int impostoSize = impostos.size();
+		if(impostoSize <= 5) {
+			return impostoSize;
+		} else {
+			throw new ImpostoSizeException();
+		}
+	}
+	
+	public boolean cadastrarImposto(Imposto imp) {
+		return impostos.add(imp);
 	}
 	
 }
