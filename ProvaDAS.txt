@@ -1,0 +1,62 @@
+Thiago Canabrava Moreira
+140163859
+
+1)
+
+A)
+- TestCase: Usado para construir testes. Para fazer funcionar, é preciso fazer uma 
+- TestSuite: Conjunto de vários testes a ser executados. Os testes podem pertencer a apenas uma classe ou a várias.
+- Assert: usa métodos para aferir a condição do teste. Se foi atendido ou nâo.
+- TestRunner: Define as configurações que do teste que vai ser executado. 
+B) 
+- Suite: Runner para rodar os testes de uma série de Classes:
+
+@RunWith(Suite.class)
+@SuiteClasses({ Classe1.class, Classe2.class, Classe3.class })
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
+public class AllTests 
+
+- Categories: Runner para definir grupos de testes que vão ser executados ou não, usando categorias.
+
+public class Classe1 {
+  @Test
+  public void teste1() {
+    fail();
+  }
+
+  @Category(TestesLegais.class)
+  @Test
+  public void teste2() {
+  }
+}
+
+@RunWith(Categories.class)
+@IncludeCategory(TestesLegais.class)
+@SuiteClasses( { Classe1.class }) 
+public class Classe1Test {
+}
+
+Obs: ele só vai rodar o teste 2
+
+- Parametrized: Runner para rodar testes parametrizados, onde as instancias s"ao criadas sempre que é trocado o parâmetro.
+
+@RunWith(Parameterized.class)
+public class Classe {
+  @Parameters(a = "{index}: b[{0}]={}")
+  public static Iterable<Object[]> data() {
+    return Arrays.asList(new Object[][] { { 1, 1 }, { 2, 2 }, { 3, 3 }});
+  }
+
+  private int entrada;
+  private int esperado;
+
+  public ClasseTeste(int ent, int esp) {
+    entrada = ent;
+    esperado = esp;
+  }
+
+  @Test
+  public void test() {
+    assertEquals(esperado, Classe.teste(input));
+  }
+}
