@@ -1,11 +1,8 @@
 # Trabalho Final Ruby on Rails
 
 ## Pergunta 1
-1.1 - O que é framework? <br>
-1.2 - Qual seu propósito (desenvolvimento web, mobile, frontend)?  <br>
-1.3 - Como ele é estruturado (há diagrama de classes, arquitetural, dentre outros)?  <br>
-1.4 - Quais são os pontos de extensão de funcionalidades desse framework (hot-spots)? <br>
-1.5 Qual o modelo de componente definido para o framework? Ele está publicamente definido e acessível? <br>
+### 1 - O que é framework? Qual seu propósito (desenvolvimento web, mobile, frontend)? Como ele é estruturado (há diagrama de classes, arquitetural, dentre outros)? Quais são os pontos de extensão de funcionalidades desse framework (hot-spots)? <br>
+- Qual o modelo de componente definido para o framework? Ele está publicamente definido e acessível? <br>
 
 ### 1.1 O que é FrameWork
 
@@ -66,6 +63,7 @@ ActionController e ApplicationRecord.
 **ActiveRecord** é também um módulo do Rails, responsável por representar os dados e a lógica de negocio de cada entidade do banco de dados. As classes do Rails, localizadas na model, estendem do ActiveRecord. É um ponto de extensão incrível do Rails pois permite que o desenvolvedor crie tabelas, regras de negocio para essas tabelas ([as validations](http://guides.rubyonrails.org/active_record_validations.html)) sem escrever nada em linguagem de banco, sql ou qualquer coisa do tipo. É um módulo que automatiza uma importante atividade do desenvolvimento web, porém que mantém flexivel o suficiente para que o desenvolvedor consiga usar nos mais variados cenários. Além disso o ActiveRecord já adiciona em cada classe os métodos de CRUD, além de vários outros métodos que são úteis no desenvolvimento web, como os callbacks de DB por exemplo.
 
 ### 1.5 Modelo de Componente definido para o Rails
+Podemos dizer que os componentes do Rails são basicamente *modules* incluidos no application.rb, que ficam disponíveis em toda a aplicação. Entre os módulos principais podemos citar: action mailer, action pack, action view, active job, active model, active record, active support. Esses componentes são definidos no próprio framework e podem ser acessados (até mesmo alterados) em qualquer aplicação em Rails. Além desses componentes o framework conta com a adição de pacotes, as gems, que em alguns casos pelo fato de serem relativamente genéricas e em muitos casos reutilizáveis, algumas gems possuem muitas características de componentes e podem serem tratadas como tal. Porém nos casos das gems nem sempre todas as clases e módulos da mesma ficam acessíveis para alteração pelo desenvolvedor. Assim para esse tipo de componente é necessário uma análise particular, para entender como ele foi definido e estruturado e assim determinar o quanto ele é acessível
 
 ## Pergunta 2
 2.1 - O que é um componente de software para o framework adotado e como ele é estruturado?<br>
@@ -82,19 +80,20 @@ Suas interfaces de comunicação são definidas como classes abstratas e/ou conc
 
 2.4 - Como componentes de software são adaptados para o framework sob investigação? Glue-code? Herança? Adapter? etc...
 
-  Todos os pontos de extensão do Rails são reutilizados utilizando Herança uma vez que as classes dos componentes são herdadas para implementação e/ou utilização das funcionalidades desejadas.
+Todos os pontos de extensão do Rails são reutilizados utilizando Herança uma vez que as classes dos componentes são herdadas para implementação e/ou utilização das funcionalidades desejadas.
 
 ## Pergunta 3
-3.1 - Quais são os modos  geralmente utilizados para composição componentes / frameworks?<br>
-3.2 - Como se dá a comunicação entre componentes / framework?<br>
-3.3 - Há um diagrama comportamental (sequencia, colaboração, etc) que demonstre tal comunicação?
+### 3 - Quais são os modos  geralmente utilizados para composição componentes / frameworks?<br>
+- Como se dá a comunicação entre componentes / framework?<br>
+- Há um diagrama comportamental (sequencia, colaboração, etc) que demonstre tal comunicação?
 
-### 3 Comunicação entre os Componentes
+### Comunicação entre os Componentes
 
-A comunicação entre os Componentes do Ruby on Rails pode ser observado e analisado a partir de 2 modos de visualização em UML, sendo um deles o Module View, que apresenta todos os componentes do framework de forma estática, e outro chama-se Component & Connector View, que exibe os componentes da forma com que eles existem em tempo de execução e como eles se comunicam entre si.
+A comunicação entre os Componentes do Ruby on Rails pode ser observada e analisada a partir de 2 modos de visualização em UML, sendo um deles o Module View, que apresenta todos os componentes do framework de forma estática, e outro chama-se Component & Connector View, que exibe os componentes da forma com que eles existem em tempo de execução e como eles se comunicam entre si.
 
 ![module_view](./imgs/static_view.png)
 Imagem 2 - Module View
 
 ![cc_view](./imgs/dynamic_view.png)
 Imagem 3 - Component & Connector View
+
