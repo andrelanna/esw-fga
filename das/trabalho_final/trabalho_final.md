@@ -70,17 +70,22 @@ Podemos dizer que os componentes do Rails são basicamente *modules* incluidos n
 
 Para o Rails um componente é uma unidade independente que pode ser usada separadamente ou em conjunto com outras partes do framework. Sua estrutura é projetada através de pacotes e pode ser observada na imagem abaixo do diagrama de arquitetura.
 
-![Arquitetura_Rails](./imgs/rails_arquitetura.jpg)
-Imagem 1 - Arquiterura Rails
 
 2.2 - Como os detalhes de sua implementação são ocultados dos framework?<br>
+
 2.3 - Como suas interfaces de comunicação / composição devem ser definidas?<br>
 
 Suas interfaces de comunicação são definidas como classes abstratas e/ou concretas, sendo que as classes concretas trazem funcionalidades prontas para serem utilizadas a partir de herança como é o caso do ActiveRecord que implementa a classe Base como concreta, ou o ApplicationController herdando de uma classe abstrata ActionController.
 
 2.4 - Como componentes de software são adaptados para o framework sob investigação? Glue-code? Herança? Adapter? etc...
 
-Todos os pontos de extensão do Rails são reutilizados utilizando Herança uma vez que as classes dos componentes são herdadas para implementação e/ou utilização das funcionalidades desejadas.
+Há varias maneiras de adaptar componentes para o Rails, uma vez que este framework é considerado framework de framework, vamos analisar algumas tecnicas utilizadas
+
+**Glue-code:** está tecnica é usada para integrar integrar componentes que não são compativeis como gems que não tem caracteristicas de framework.
+**Herança:** Esta tecnica é usada para integrar componentes onde os aspectos internos estão disponíveis para o Rails tais como gems com característica de framework onde os pontos de extensão se comportam como caixa-branca
+
+Considerando somente os componentes que Todos os pontos de extensão do Rails são reutilizados utilizando Herança uma vez que as classes dos componentes são herdadas para implementação e/ou utilização das funcionalidades desejadas.
+
 
 ## Pergunta 3
 ### 3 - Quais são os modos  geralmente utilizados para composição componentes / frameworks?<br>
