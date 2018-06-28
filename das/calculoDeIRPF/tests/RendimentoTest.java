@@ -1,14 +1,10 @@
-package calculoDeIRPF.tests;
-
 import static org.junit.Assert.*;
-
-import org.junit.BeforeClass;
-import org.junit.FixMethodOrder;
-
 import calculoDeIRPF.IRPF;
 import calculoDeIRPF.Rendimento;
 import calculoDeIRPF.exceptions.RendimentosNulosException;
 
+import org.junit.BeforeClass;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
@@ -24,13 +20,6 @@ public class RendimentoTest {
 	}
 	
 
-	@Test(expected = ArrayIndexOutOfBoundsException.class)
-	public void test0opasso_AcessarRendimentoNaoCadastrado() {
-		Object[] rends = irpf.getRendimentos();
-		Object r = rends[0];
-	}
-	
-	
 	@Test
 	public void test2opasso_CadastrarRendimentoDuplicado() throws RendimentosNulosException {
 		String descricao = "Salario"; 
