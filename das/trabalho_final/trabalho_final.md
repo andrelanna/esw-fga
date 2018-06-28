@@ -22,6 +22,9 @@
 
   ### 1.3 Estrutura
 
+  ![module_view](./imgs/static_view.png)<br>
+  Imagem 1 - Diagrama de Classe (Module View)
+
   #### 1.3.1 Módulos
 
   ***Action Mailer***
@@ -68,7 +71,7 @@ Podemos dizer que os componentes do Rails são basicamente *modules* incluidos n
 ## Pergunta 2
 2.1 - O que é um componente de software para o framework adotado e como ele é estruturado?<br>
 
-Para o Rails um componente é uma unidade independente que pode ser usada separadamente ou em conjunto com outras partes do framework. Sua estrutura é projetada através de pacotes e pode ser observada na imagem abaixo do diagrama de arquitetura.
+Para o Rails um componente é uma unidade independente que pode ser usada separadamente ou em conjunto com outras partes do framework. Sua estrutura é projetada através de pacotes.
 
 
 2.2 - Como os detalhes de sua implementação são ocultados dos framework?<br>
@@ -82,23 +85,34 @@ Suas interfaces de comunicação são definidas como classes abstratas e/ou conc
 Há varias maneiras de adaptar componentes para o Rails, uma vez que este framework é considerado framework de framework, vamos analisar algumas tecnicas utilizadas
 
 **Glue-code:** está tecnica é usada para integrar integrar componentes que não são compativeis como gems que não tem caracteristicas de framework.
+
 **Herança:** Esta tecnica é usada para integrar componentes onde os aspectos internos estão disponíveis para o Rails tais como gems com característica de framework onde os pontos de extensão se comportam como caixa-branca
-
-Considerando somente os componentes que Todos os pontos de extensão do Rails são reutilizados utilizando Herança uma vez que as classes dos componentes são herdadas para implementação e/ou utilização das funcionalidades desejadas.
-
 
 ## Pergunta 3
 ### 3 - Quais são os modos  geralmente utilizados para composição componentes / frameworks?<br>
 - Como se dá a comunicação entre componentes / framework?<br>
 - Há um diagrama comportamental (sequencia, colaboração, etc) que demonstre tal comunicação?
 
-### Comunicação entre os Componentes
 
-A comunicação entre os Componentes do Ruby on Rails pode ser observada e analisada a partir de 2 modos de visualização em UML, sendo um deles o Module View, que apresenta todos os componentes do framework de forma estática, e outro chama-se Component & Connector View, que exibe os componentes da forma com que eles existem em tempo de execução e como eles se comunicam entre si.
+### 3.1 Modos de para a Composição de Componentes/Frameworks
 
-![module_view](./imgs/static_view.png)
-Imagem 2 - Module View
+Existem 3 principais modos para a interação ou composição de Componentes/Frameworks:
 
-![cc_view](./imgs/dynamic_view.png)
-Imagem 3 - Component & Connector View
+- Esta composição define as funcionalidades da aplicação por meio das interações entre os componentes. Essas interações são tratadas como um contrato em nível de aplicação.
 
+- Trata-se de uma composição que permite a comunicação entre frameworks de componentes e seus componentes. Gerenciar essas interações qualificam um contrato em nível de sistema.
+
+- Permite a interações entre frameworks, além da composição de componentes de diferentes frameworks. Esta interação classifica um contrato de interoperação.
+
+
+### 3.2 Comunicação entre os Componentes
+
+A comunicação entre os Componentes do Ruby on Rails pode ser observada e analisada a partir de 2 modos de visualização em UML, sendo um deles o Module View (observe a Imagem 1, no tópico de estrutura), que apresenta todos os componentes do framework de forma estática, e outro chama-se Component & Connector View, que exibe os componentes da forma com que eles existem em tempo de execução e como eles se comunicam entre si.
+
+![cc_view](./imgs/dynamic_view.png)<br>
+Imagem 2 - Component & Connector View
+
+### 3.3 Diagrama comportamental
+
+![cc_view](./imgs/rails_diagram.png)<br>
+Imagem 3 - Diagrama Comportamental
