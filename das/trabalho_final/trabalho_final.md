@@ -78,7 +78,7 @@ Para o Rails um componente é uma unidade independente que pode ser usada separa
 
 ### 2.3 - Como suas interfaces de comunicação / composição devem ser definidas?<br>
 
-Suas interfaces de comunicação são definidas como classes abstratas e/ou concretas, sendo que as classes concretas trazem funcionalidades prontas para serem utilizadas a partir de herança como é o caso do ActiveRecord que implementa a classe Base como concreta, ou o ApplicationController herdando de uma classe abstrata ActionController.
+Suas interfaces de comunicação são definidas como classes abstratas e/ou concretas, sendo que as classes concretas trazem funcionalidades prontas para serem utilizadas a partir de herança como é o caso do ActiveRecord que implementa a classe Base como concreta, ou o ActionController herdando de uma classe abstrata AbstractController.
 
 ### 2.4 - Como componentes de software são adaptados para o framework sob investigação? Glue-code? Herança? Adapter? etc...
 
