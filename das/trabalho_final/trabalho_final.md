@@ -69,9 +69,20 @@ ActionController e ApplicationRecord.
 
 ## Pergunta 2
 2.1 - O que é um componente de software para o framework adotado e como ele é estruturado?<br>
+
+Para o Rails um componente é uma unidade independente que pode ser usada separadamente ou em conjunto com outras partes do framework. Sua estrutura é projetada através de pacotes e pode ser observada na imagem abaixo do diagrama de arquitetura.
+
+![Arquitetura_Rails](./imgs/rails_arquitetura.jpg)
+Imagem 1 - Arquiterura Rails
+
 2.2 - Como os detalhes de sua implementação são ocultados dos framework?<br>
 2.3 - Como suas interfaces de comunicação / composição devem ser definidas?<br>
+
+Suas interfaces de comunicação são definidas como classes abstratas e/ou concretas, sendo que as classes concretas trazem funcionalidades prontas para serem utilizadas a partir de herança como é o caso do ActiveRecord que implementa a classe Base como concreta, ou o ApplicationController herdando de uma classe abstrata ActionController.
+
 2.4 - Como componentes de software são adaptados para o framework sob investigação? Glue-code? Herança? Adapter? etc...
+
+  Todos os pontos de extensão do Rails são reutilizados utilizando Herança uma vez que as classes dos componentes são herdadas para implementação e/ou utilização das funcionalidades desejadas.
 
 ## Pergunta 3
 3.1 - Quais são os modos  geralmente utilizados para composição componentes / frameworks?<br>
@@ -83,7 +94,7 @@ ActionController e ApplicationRecord.
 A comunicação entre os Componentes do Ruby on Rails pode ser observado e analisado a partir de 2 modos de visualização em UML, sendo um deles o Module View, que apresenta todos os componentes do framework de forma estática, e outro chama-se Component & Connector View, que exibe os componentes da forma com que eles existem em tempo de execução e como eles se comunicam entre si.
 
 ![module_view](./imgs/static_view.png)
-Imagem 1 - Module View
+Imagem 2 - Module View
 
 ![cc_view](./imgs/dynamic_view.png)
-Imagem 2 - Component & Connector View
+Imagem 3 - Component & Connector View
