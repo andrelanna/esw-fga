@@ -1,0 +1,21 @@
+Aluno: Iago Vasconcelos de Carvalho
+Matricula: 150011849
+
+Questao 01-
+
+A-
+Um test case eh um conjunto de entradas, valores esperados e condicoes usados para garantir o comportamento de funcoes ou metodos
+e assegurar o seu funcionamento correto.
+O TestSuite no JUnit eh uma composicao de classes de testes que executa todos os testes presentes nas classes definidas em um conjunto.
+A classe Assert trata das assertivas e comparações entre valores em um teste. Testrunners são ferramentas que recebem
+como parametro um testcase para apresentar resultados de acordo com essa execucao. 
+
+
+B- Um dos possíveis runners do RunWith eh a Category que permite definir categorias diferentes para 
+as classes de testes, com um funcionamento semelhante a uma "label".
+Outro runner é o Parameterized, que permite que os testes recebam uma coleção de dados como parametro,
+evitando duplicacao de codigo e ajudando na manutencao dos testes.
+Outra opcao de runner eh o Suite que possibilita a execucao de multiplas classes de teste.
+
+
+C- O framework JUnit realiza um escalonamento e ordenação entre os testes.
