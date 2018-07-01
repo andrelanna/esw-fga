@@ -1,0 +1,16 @@
+Questao 1)
+
+a) TestCase: Classe responsavel por instanciar os casos de testes a serem executados.
+
+Assert: Classe responsavel por definir metodos de avaliacao e checagem por regras definidas.
+
+TestRunner: Classe abstrata que e responsavel por descrever, coletar, executar e analizar multiplos testes.
+
+b) Parameterized: Runner com a funcaao de gerar testes parametrizados automaticamente dado os valores de cada parametro.
+
+AllTests: Resposavel por executar todos os testes listados.
+
+Suite: Permite que o usuario construa uma suite de testes contendo testes de varias classes.
+
+c) JUnit executa cada teste idenpedentemente de forma a encapsilar comportamentos especificos a cada teste. O framework tambem disponibiliza formas de controle para execucao de tarefas antes e apos cada teste. 
+	
