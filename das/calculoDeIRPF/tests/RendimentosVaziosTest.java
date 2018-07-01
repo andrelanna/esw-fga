@@ -1,13 +1,11 @@
-package calculoDeIRPF.tests;
-
-import static org.junit.Assert.*;
+package tests;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import calculoDeIRPF.IRPF;
-import calculoDeIRPF.exceptions.RendimentosNulosException;
 import calculoDeIRPF.exceptions.RendimentosVaziosException;
+import exceptions.RendimentosNulosException;
 
 public class RendimentosVaziosTest {
 

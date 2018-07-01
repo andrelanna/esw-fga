@@ -1,0 +1,19 @@
+Aluno: Lucas Oliveira Silva
+Matrícula: 15/0016018
+
+01-a) 
+    Test: indica que o método a seguir é um teste.
+    TestCase: indica uma classe testes.
+    Assert: compara o valor de retorno de um método testado com o valor esperado.
+    TestRunner: especifica o tipo de teste (mock, parametrizado, suit etc)
+    
+   b)
+    Parametrizado: é usado para testes que necessitam de parâmetros. Durante a codificação dos testes o programador especifica uma Collection com os parâmetros de entrada e o resultado esperado. Durante a execução dos testes o Runner executa o teste para cada tupla na Collection.
+    
+    Suite: a suite é um conjunto de TestCases em que o programador especifica quais TestCases compõem aquela suite por meio da anotação SuiteClasses. Durante a execução o Runner executa todos os TestCases que compõem a Suite.
+    
+    Mock: é utilizado para testar componentes que não estão completos. Para isso o programador especifica o comportamento da parte que ainda não está pronta e o Runner usa isso para executar os testes.
+    
+   c) 
+    O Framework garante a indepedência de testes criando um objeto para cada teste realizado, assim um teste não influência o outro.
+    
