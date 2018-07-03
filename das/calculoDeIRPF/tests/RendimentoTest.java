@@ -1,4 +1,4 @@
-package calculoDeIRPF.tests;
+package tests;
 
 import static org.junit.Assert.*;
 
@@ -7,7 +7,7 @@ import org.junit.FixMethodOrder;
 
 import calculoDeIRPF.IRPF;
 import calculoDeIRPF.Rendimento;
-import calculoDeIRPF.exceptions.RendimentosNulosException;
+import calculoDeIRPF.exceptions.RendimentosVaziosException;
 
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
@@ -32,7 +32,7 @@ public class RendimentoTest {
 	
 	
 	@Test
-	public void test2opasso_CadastrarRendimentoDuplicado() throws RendimentosNulosException {
+	public void test2opasso_CadastrarRendimentoDuplicado() throws RendimentosVaziosException {
 		String descricao = "Salario"; 
 		float valor = 3000f;
 		
@@ -45,7 +45,7 @@ public class RendimentoTest {
 	}
 	
 	@Test
-	public void test1opasso_CadastroRendimentoUnico() throws RendimentosNulosException {
+	public void test1opasso_CadastroRendimentoUnico() throws RendimentosVaziosException {
 		String descricao = "Salario";
 		float valor = 5000f;
 		
@@ -58,7 +58,7 @@ public class RendimentoTest {
 	}
 	
 	@Test
-	public void test3opasso_CadastroAluguel() throws RendimentosNulosException {
+	public void test3opasso_CadastroAluguel() throws RendimentosVaziosException {
 		String descricao = "Aluguel"; 
 		float valor = 1000f;
 		
