@@ -16,4 +16,12 @@ public class Rendimento {
 		return new Rendimento(descricao, valor, isentoIR);
 	}
 
+	public boolean ehIsento() {
+		return isentoIR;
+	}
+
+	public float getValor() {
+		return valor;
+	}
+
 }
