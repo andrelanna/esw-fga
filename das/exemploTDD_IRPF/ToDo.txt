@@ -1,0 +1,15 @@
+TODO: 
+
+Cadastrar rendimentos diversos para um contribuinte
+Cadastrar deducoes diversas para um contribuinte
+ - Contribuição previdenciaria
+ - Pensão alimentícia
+ - Dependente R$189,59 / dependente
+ 
+Calcular base de calculo (rendimentos - deduções legais)
+
+
+
+
+
+DONE:
