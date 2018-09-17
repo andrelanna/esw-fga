@@ -44,7 +44,7 @@ public class Contribuinte {
 	}
 
 	public int getQtdeTotalRendimentos() {
-		return 1;
+		return rends.length;
 	}
 
 	public float getValorTotalRendimentos() {
