@@ -19,4 +19,15 @@ public class CadastroRendimentosTeste {
 		assertEquals(1, c.getQtdeTotalRendimentos());
 		assertEquals(4000.00f, c.getValorTotalRendimentos(), 0f);
 	}
+	
+	@Test
+	public void testCadastroOutroRendimento() {
+		Contribuinte c = Contribuinte.obterContribuinte("Fulano", "111.222.333-44");
+		Rendimento  r = Rendimento.obterRendimento("Aluguel", 2000.00f, false);
+		boolean resposta = c.cadastrarRendimento(r); 
+		
+		assertTrue(resposta);
+		assertEquals(1, c.getQtdeTotalRendimentos());
+		assertEquals(2000.00f, c.getValorTotalRendimentos(), 0f);
+	}
 }
