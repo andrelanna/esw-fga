@@ -1,0 +1,39 @@
+Vitor Nere Araújo Ribeiro
+13/0137413
+
+a)
+    TestCase:
+            Utilizada para implementar um conjunto de testes unitários em um determinado caso.
+
+    TestSuite
+            Utilizado para rodar uma suite de testes implementada.
+
+    Assert:
+            Utilizado para validar se um determinado resultado está correto ou não.
+
+    TestRunner:
+            Utilizado para executar testes de forma personalizada como Paramaterized, MockitoJUnitRunner, 
+        Suite e Category.
+
+b)
+    Paramaterized:
+            Teste parametrizado funciona de forma que recebe um Array de entradas sendo cada elemento
+        desse array outro Array de valores sendo que o ultimo valor desse array é utilizado para 
+        validar o valor de retorno. Dessa maneira é possível testar uma variação de possibilidades
+        de entradas e saídas.
+        
+
+    MockitoJUnitRunner:
+            Mockito permite simular o retorno de uma classe. Dessa forma é possível realizar os testes
+        sem necessariamente ter a classe implementada.
+
+    Category:
+            Category permite categorizar seus testes de forma que é possível em determminado momento
+        executar somente um ou um conjunto de categorias de testes quando desejado.
+
+    Suite:
+        Suite permite executar um conjunto de classes de tests.
+
+c)
+        JUnit traz consigo um conjunto de ferramentas que permite a construção de vários tipos de testes,
+    onde possibilita a construção de testes independente do código, sendo possível até a prática de TDD.
