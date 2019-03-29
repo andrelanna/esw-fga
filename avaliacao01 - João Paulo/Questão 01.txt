@@ -1,0 +1,23 @@
+﻿a)
+TestCase
+	Cada caso de teste que será executado e testará uma porção pequena da aplicação.
+TestSuite
+	Conjunto de casos de teste agrupados por alguma regra pré-definida	
+Assert
+	Assert é utilizado para garantir que algo seja igual a algum parâmetro pré-definido. Desta forma se o assert for quebrado o software terá um erro dentro de sua lógica, portanto determina a corretude de um resultado.
+TestRunner
+	Conjunto de classes que possibilitam o teste a ser rodado em uma forma personalizada. Cada Runner tem suas próprias regras e notações para modificar o comportamento dos testes.
+
+b)
+
+3 Runners
+	Parameterized
+		Parametriza as entradas do teste de forma que não seja necessário criar vários testes diferentes quando as entradas são semelhantes.
+	Mockito
+		Simula partes faltantes do software de forma que o teste ainda possa ser executado sem a lógica que a realiza.
+	Category
+		Agrupa os testes por categoria sendo possível assim, executá-los por suas respectivas categorias.
+
+c)
+
+	Para cada teste o junit instancia um objeto diferente.
