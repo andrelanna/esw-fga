@@ -1,6 +1,0 @@
-Honda;City;2009;2010;
-Triumph;Tiger;2018;2018;
-Fiat;Palio;2015;2015;
-Honda;City;2009;2010;
-Triumph;Tiger;2018;2018;
-Fiat;Palio;2015;2015;
