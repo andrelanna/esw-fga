@@ -1,0 +1,23 @@
+Lucas Gomes Pereira
+13/0013242
+
+###############################################################
+Respostas da questão 1
+
+A)
+	TestCase: O TestCase é a classe que é utilizada para se definir os casos de teste. Nessa classe pode-se definir aolguns conpotamentos do teste também, como os parametros (para testes parametrizados) e o fluxo do teste.
+
+	TestSuite: O TesteSuite é composto por um ou vários TestCase e é utilizado para fazer a chamada deles simultaneamente.
+
+	Assert: A classe Assert contem métodos para fazer as verificações dos testes, como comparações de valores.
+
+	TestRunner: O TestRunner define como os testes devem ser executados.
+
+B)	
+	1 - Suite: Define que deve ser executado um grupo de TestCases.
+
+	2 - Parametized: Define que os testes terão uma lista de parâmetros prédefinidos e o teste vai acontecer para cada parametro definido.
+
+	3 - ?
+
+C)	O JUnit garante a independência dos testes pois a sua arquitetura permite a separação de casos te testes (TestCase) e mantem cada teste como um método separado. Esses testes podem ser chamados por uma classe TestSuite que agrega todos os TestCases.
