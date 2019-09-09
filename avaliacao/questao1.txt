@@ -1,0 +1,11 @@
+(1)
+
+a- A interface Test serve para definir um hotspot no  framework de testes, fazendo com que o framework de testes chame o testes escritos pelo usuario.
+
+b-
+Parameterize = implementação de testes parametrizados. 
+Categories = escolher grupos de testes a serem incluidos ou não.
+Suite = para construir diversos testes de varias classes.
+
+c- O jUnit consegue garantir a independecia dos test pois ao execultar cada teste ele reseta o codigo perdendo estados do teste anterior, em caso que necessite de dependencia  o codigo deve ser expecificado.
+
