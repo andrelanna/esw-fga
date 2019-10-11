@@ -1,0 +1,25 @@
+(1)
+a)
+(Test): interface responsavel por distinção de métodos comuns e métodos de testes. É utilizada por meio da notação @Test.
+
+(TestCase): é a classe reponsável por criar estado fixos, ou fixtures durante a execução de multiplos testes.
+
+(TestSuite): é a classe responsavel pelo gerenciamento de uma suíte de testes(que contem várias classes de testes, sendo essas não necessariamente associadas)
+
+
+(Assert): é a classe responsável pela criação dos asserts, possuindo vários tipos de asserção que podem ser utilizados nos casos de testes.
+
+(TestRunner): é uma classe que pode recebeb uma classe de teste como argumento e gerencia instanciação, execução dos testes.
+
+b) 
+(Suite): Este runner permite contruir uma suite de testes envolvendo  testes de classes distintas.
+
+
+(Parameterized): Runner permite executar testes parametrizados, que nada mais é do que criar um conjunto de entradas e saídas pré definidas que serão utilizadas nos metodos a serem testados;
+
+(Categories): Runner que permite categorizar os métodos ou classes de testes por meio da criação de interfaces, e utilização da mesma como uma categoria.
+
+(MockitoJUnitRunner): Permite emular metodos de uma classe não implementada por meio de uma interface. Durante a execução dos testes deve-se informar que a saída desejada para um método.
+
+c) O JUNit executa direntes teste com diferentes objetos;
+
