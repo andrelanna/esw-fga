@@ -1,0 +1,24 @@
+Leonardo Cambraia Corrêa
+13/0012599
+
+Questão 1: O projeto do framework JUnit é composto da interface Test e das seguintes classes TestCase, TestSuite, Assert e TestRunner. Com relação às classes e interfaces acima faça o que se pede:
+
+a) Defina cada uma das classes/interface acima de modo a explicar sua função no Framework JUnit.
+
+  Interface Test:
+  Classe TestCase: Define o modo que múltiplos testes serão executados. Onde temos as condições;
+  Classe TestSuite: Irá rodar uma coleção de casos de teste;
+  Classe Assert: É um conjunto de métodos, bastante útil para auxiliar na escrita dos testes;
+  Classe TestRunner: Irá rodar o caso de teste que foi definido na classe TestCase.
+
+b) Liste e explique o modo de execução de ao menos 3 Runners.
+
+  Categoria: Específica grupos de testes a serem incluídos ou excluídos. Basta usarmos @Category(Categoria.class) e aí usar um --filter para restringir os testes.
+
+  Suite: Permite construir manualmente uma suite com testes de várias classes. Basta usar o @RunWith(Suite.class) e @Suite.SuiteClasses, onde vou indicar quais classes de testes serão incluídas.
+
+  Parametrizado: Permite implementar testes parametrizados por meio da criação de instâncias para os métodos de testes. Devemos usar @RunWith(Parameterized.class) e ai definir os parametros no método com a anotação @Parameters.
+
+c) Como o framework JUnit garante a independência de testes?
+
+  Uma boa prática e forma de garantir a independência dos testes é por usar os métodos @Before e @After para definir pré-requisitos para os casos de testes que vamos criar. Caso isso não seja mais possível, podemos criar uma nova classe de testes para mantermos a independência deles.
