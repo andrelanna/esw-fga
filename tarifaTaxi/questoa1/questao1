@@ -1,0 +1,20 @@
+Questão 1
+
+a) 
+
+TestCase: É uma especificação das entradas, condições para a execução, que após executados, tem seu resultado comparado com o 
+esperado resultados esperado, para verificar sua corretude.
+TestSuite: É uma coleção de casos de teste usado para testar um software de modo a garantir que seu comportamento está conforme o esperado.
+Assert: Utilizado na validação de um determinado resultado, verificando se esta orreto ou não.
+TestRunner: Classes para a execução dos testes de forma personalizada, exemplos no item b.
+
+b)
+Suite que é um runner padrão que permite criar de forma manualum conjunto contendo testes de várias classes.
+
+Parametrização que é um runner padrão que implementa testes parametrizados. Ao executar uma classe de teste parametrizada, 
+instâncias são criadas para serem utilizadas nos testes, evitando a criação de varios testes de forma desnecessária.
+
+Categorias é um runner utilizado para especificar grupos de testes, desse modo pode-se definir por meio dos grupos quais
+testes serão excluídos ou incluídos na execução. 
+
+C)
