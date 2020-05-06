@@ -1,0 +1,28 @@
+Aluno: Cecilia Dib
+Matricula: 140134425
+
+Questao 1
+
+a) TestCase: api para construir testes. É preciso implementar uma subclasse do TestCase, definir variaveis de instancia que armazenam o estado, inicializar o estado com setUp. Teste para cada classe.
+
+   TestSuite: pode-se juntar testes de varias classes, é uma classe que vai executar os testes das outras classes de teste. Teste para muitas classes.
+
+   Assert: usa metodos tipo premissa, ex: assertEquals, assertTrue, assertNotNull etc. Eles determinam se uma condição de teste foi atendida ou não.
+
+   TestRunner: api para execucao de testes.
+
+b) Tipos de Runners:
+	- Suite: permite que voce crie a sua propria suite de testes, para testar fluxo por exemplo, ou seja, contem testes de muitas classes.
+	- Parametrized: para testes parametrizados, sao criadas instancias para os metodos de teste e criados dados para teste no formato de lista.
+	- Categories: ele permite que sejam incluidos ou excluidos alguns metodos de teste durante a execucao, ou seja, serve como filtro.
+
+c) Ele pode verificar se cada unidade de código funciona da forma esperada, é orientado a objeto, sua api é organizada em:
+	- Uma classe Test que contem um método runTest responsável por fazer testes particulares.
+	- Duas classes que herdam da classe Test. A classe TestCase, que testa os resultados de um método, e a classe TestSuite que faz um único teste em mais de um método registrando os resultados.
+	- A classe TestCase possui também os métodos setUp e TearDown.
+
+
+
+Questao 2
+
+
