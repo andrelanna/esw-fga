@@ -1,0 +1,31 @@
+UnB – Universidade de Brasilia
+FGA – Faculdade do Gama
+DAS – Desenvolvimento Avançado de Software
+Prof. André Luiz Peron Martins Lanna
+
+Avaliação 1 - Respostas
+
+Aluno: Allan Jefrey Pereira Nobre
+Matrícula: 15/0029624
+
+Questão 1:
+- a)
+* TestCase é um caso de teste, como o próprio nome já evidencia, no qual o JUNit instancia um objeto de teste independente para
+realizar algum tipo de teste baseado na implementação desejada;
+* TestSuite é um suite de testes, que agrupa determinados tipos testes de acordo com a implementação desejada, as Suites de teste são
+bastante úteis para rodar testes específicos de acordo com alguma classificação;
+* Asserts são uma espécie de validadores utilizados dentro dos TestCases para realizar assertivas que verificam alguma situação
+desejada ou indesejada, baseado na implementação desejada do teste;
+* TestRunner define como os testes daquela classe de testes serão executados, existem vários tipos de Runners que podem ser utilizados
+para diversos fins, já que o Runner controla, de certa forma, as configurações de execução daquele conjunto de testCases.
+
+-b)
+Utilizamos o RunWith para determinar o runner desejado, no qual podemos citar:
+* Parameterized.class: Utilizado para que seja possível configurar a execução dos testes de forma parametrizada;
+* MockitoJUnitRunner.class: Utilizado para que seja possível configurar a execução dos testes utilizando recursos de Mock;
+* Suite.class: Utlizado para que seja possível configurar a execução dos testes agrupando-os em Suites de Teste;
+
+- c)
+Existe uma instância única para cada caso de teste, de modo que os testes são executados de forma independete, contudo vale a pena
+salientar o ponto de que são utilizadas variáveis globais e estáticas, trazendo a necessidade, em muitos casos, de se utilizar métodos
+providos pelo JUNit para tornar os testes verdadeiramente independetes, como: @Before, @BeforeClass, @FixMethodOrder, entre outros.
