@@ -1,0 +1,22 @@
+Aluno: João Paulo Nunes Soares
+Matrícula: 15/0038267
+Avaliação 01 DAS
+
+
+
+Questão 01
+	A)
+	  - Interface Test: A interface test é o meio de interação disponibilizado pelo framework que permite ao usuário verificar a execução de sua aplicação de uma forma simples e automatizada;
+          - TestCase: O test case é o caso que avalia o comportamento de um determinado método, ou de um procedimento. É a forma que é descrito como será avaliado, identificando as entradas e o comportamento esperado do método.
+	  - TestSuite: A suite permite englobar diversas classes de teste em "uma única classe", permitindo assim que com a execução da mesma diversos testes sejam executados com um único comando.
+	  - Assert: Assert é a forma utilizada para checar se o retorno do teste está de acordo com o esperado.Por exemplo, quando se usa AssertEquals se deseja verificar se o retorno do método que está sendo testado está igual com o valor identificado como o desejado
+	  - TestRunner: De certa forma, o test runner é o motor do junit.Ele dita a forma que os testes serão executados,identificando seu comportamento.Por exemplo, se o mesmo será executado como teste parametrizado ou como uma suite.Em outras palavras, são classes extensíveis utilizadas para executar testes.
+
+	B) 
+	   - Parametrizado: O Runner Parametrizado permite que você insira uma lista de valores que será utilizada como insumo para a realização do teste.Nessa lista são apresentadas as entradas e a saída esperada, fazendo assim com que um teste de comportamento semelhante só precise ser escrito uma vez.
+
+	   - Suite: Engloba diversas classes de teste permitindo que todas sejam executadas ao mesmo momento.
+
+	   - Categorias: permite que se categorize os testes, podendo assim realizar filtros mais extensos.Como por exemplo, executar somente alguns testes pertecentes a categoria X em meio a uma suite de teste.
+	
+	C) O framework JUnit garante a independência dos testes criando para cada um deles um objeto, fazendo assim com que a instância de um teste não interfira em outro.Tornando-os assim independentes.
