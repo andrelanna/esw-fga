@@ -1,0 +1,11 @@
+- TestCase
+Permite executar um sequencia testes com sequencias de inputs e condicionais de execução, geralmente é usado para testar um único método.
+
+- TestSuite
+É uma composição de vários casos testes inclusive de classes diferentes.
+
+- Assert
+Os Asserts são usados no JUnit com o objetivo de comparar resultados. Geralmente usado para testar falhas nos testes.
+
+- Runner
+Determina a sequencia que os testes vão ser executados.
