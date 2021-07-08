@@ -1,0 +1,14 @@
+Questão 1: O projeto do framework JUnit é composto da interface Test e das seguintes
+classes TestCase, TestSuite, Assert e TestRunner. Com relação às classes e interfaces
+acima faça o que se pede:
+
+a) Defina cada uma das classes/interface acima de modo a explicar sua função no
+Framework JUnit.
+	TesteCase: Responsável pela suite de testes
+	TestSuite: Serve para agrupar um conjunto de teste para executá-los juntos
+	Assert: Esta classe fornece um conjunto de asserção, para verificação dos testes quando executados
+	TestRunner: Classe responsável por executar os testes
+b) Liste e explique o modo de execução de ao menos 3 Runners.
+	
+c) Como o framework JUnit garante a independência de testes?
+	Gerando em tempo de execução objetos independentes para execução dos testes.
