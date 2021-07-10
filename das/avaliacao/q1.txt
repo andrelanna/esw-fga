@@ -1,0 +1,16 @@
+Aluno: Naiara Andrade Camelo
+Matrícula: 15/0043449
+
+Questão 1.
+a) 
+TestCase - é um conjunto de testes que é são feitos para validar a entrada e o retorno de métodos. 
+
+TestSuite - suíte de testes são agrupamentos de testes que podem ter relação, e ser mais complexos.
+
+Assert - Na validação dos testes, se compara o resultado atual com o esperado. Seu retorno é binário, passou ou não o teste. E possui opções como AssertEquals (se o resultado atual é igual ao esperado), AssertTrue (se é verdade x), AssertFalse (se é falso x).
+
+
+b)Suite, Categories, Parametrized.
+
+
+c)Com o framework é possível uma flexibilidade quanto a execução dos testes. Com a suíte de testes por exemplo. Pode escolher a ordem ou quais testes a serem executados. Mockar teste (um banco de dados de teste) que não interfere no programa.
